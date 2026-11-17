@@ -1,0 +1,1302 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VestaCare Home AMC — Complete Annual Residential Maintenance Plans</title>
+  <meta name="description"
+    content="Complete residential home maintenance under one reliable Annual Maintenance Contract (AMC). Scheduled preventive inspections, electrical, plumbing, AC servicing, carpentry, and civil care." />
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg" />
+  <script>
+    (function () {
+      var savedTheme = localStorage.getItem('vestacare_theme');
+      if (savedTheme === 'dark' || savedTheme === 'light') {
+        document.documentElement.setAttribute('data-theme', savedTheme);
+      }
+      var savedDir = localStorage.getItem('vestacare_dir');
+      if (savedDir === 'rtl' || savedDir === 'ltr') {
+        document.documentElement.setAttribute('dir', savedDir);
+      }
+    })();
+  </script>
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- ========================================================================
+       STICKY NAVBAR
+       Order: Home | About | Services | AMC Plans | Contact | Dashboard
+       Actions: RTL | Theme Toggle | Sign Up
+       ======================================================================== -->
+  <header class="site-header" role="banner">
+    <div class="navbar-container">
+      <!-- Brand Logo -->
+      <a href="index.html" class="brand-logo" aria-label="VestaCare Home AMC Home">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round">
+            <path d="M3 10.5L12 3l9 7.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1v-9.5z" />
+            <path d="M12 8v3m0 0l2-1.5M12 11l-2-1.5" />
+          </svg>
+        </span>
+        <span class="brand-text">
+          <span class="brand-name">VestaCare</span>
+          <span class="brand-tag">Home AMC Service</span>
+        </span>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="nav-menu-desktop" aria-label="Primary Navigation">
+        <div class="nav-item has-dropdown">
+          <button type="button" class="nav-link active dropdown-toggle-btn" aria-expanded="false" aria-haspopup="true">
+            Home
+            <svg class="dropdown-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </button>
+          <div class="dropdown-menu" role="menu" aria-label="Home Variations">
+            <a href="index.html" class="dropdown-item active" role="menuitem">
+              <span class="dropdown-item-icon" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                </svg>
+              </span>
+              <span>
+                <span class="dropdown-item-title">Home 1 — Classic AMC</span>
+                <span class="dropdown-item-desc">Complete residential maintenance overview &amp; plan walkthrough</span>
+              </span>
+            </a>
+            <a href="home-2.html" class="dropdown-item" role="menuitem">
+              <span class="dropdown-item-icon" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="3" y="3" width="7" height="7"></rect>
+                  <rect x="14" y="3" width="7" height="7"></rect>
+                  <rect x="14" y="14" width="7" height="7"></rect>
+                  <rect x="3" y="14" width="7" height="7"></rect>
+                </svg>
+              </span>
+              <span>
+                <span class="dropdown-item-title">Home 2 — Editorial Care</span>
+                <span class="dropdown-item-desc">Interactive plan estimator, tabbed trade matrix &amp; seasonal
+                  timeline</span>
+              </span>
+            </a>
+          </div>
+        </div>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="amc-plans.html" class="nav-link">AMC Plans</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+        <a href="dashboard.html" class="nav-link">Dashboard</a>
+      </nav>
+
+      <!-- Desktop Right Actions -->
+      <div class="nav-actions-desktop">
+        <button type="button" class="rtl-toggle-btn" aria-label="Toggle RTL layout" title="Toggle RTL">RTL</button>
+        <button type="button" class="theme-toggle-btn" aria-label="Switch to dark theme"
+          title="Toggle Light/Dark Theme">
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+        </button>
+        <span class="nav-divider" aria-hidden="true"></span>
+        <a href="signup.html" class="nav-auth-signup">Sign Up</a>
+      </div>
+
+      <!-- Mobile Controls -->
+      <div class="nav-mobile-controls">
+        <button type="button" id="hamburger-btn" class="hamburger-btn" aria-expanded="false"
+          aria-controls="mobile-nav-drawer" aria-label="Open navigation menu">
+          <svg class="icon-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+            stroke-linecap="round">
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+          <svg class="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+            stroke-linecap="round">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobile-nav-drawer" class="mobile-nav-drawer" aria-label="Mobile Navigation">
+      <div class="mobile-nav-list">
+        <div>
+          <button type="button" id="mobile-home-dropdown-btn" class="mobile-nav-link active" aria-expanded="false">
+            <span>Home Variations</span>
+            <svg class="dropdown-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2.2">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </button>
+          <div id="mobile-home-submenu" class="mobile-dropdown-submenu open">
+            <a href="index.html" class="mobile-submenu-link active">Home 1 — Classic AMC Overview</a>
+            <a href="home-2.html" class="mobile-submenu-link">Home 2 — Editorial &amp; Interactive</a>
+          </div>
+        </div>
+        <a href="about.html" class="mobile-nav-link">About</a>
+        <a href="services.html" class="mobile-nav-link">Services</a>
+        <a href="amc-plans.html" class="mobile-nav-link">AMC Plans</a>
+        <a href="contact.html" class="mobile-nav-link">Contact</a>
+        <a href="dashboard.html" class="mobile-nav-link">Dashboard</a>
+      </div>
+      <div class="mobile-nav-actions">
+        <div class="mobile-utility-btns">
+          <button type="button" class="rtl-toggle-btn" aria-label="Toggle RTL layout">RTL</button>
+          <button type="button" class="theme-toggle-btn" aria-label="Switch to dark theme">
+            <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+            <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="5"></circle>
+              <line x1="12" y1="1" x2="12" y2="3"></line>
+              <line x1="12" y1="21" x2="12" y2="23"></line>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+              <line x1="1" y1="12" x2="3" y2="12"></line>
+              <line x1="21" y1="12" x2="23" y2="12"></line>
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+            </svg>
+          </button>
+        </div>
+        <a href="signup.html" class="btn btn-primary btn-block">Sign Up</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <!-- ======================================================================
+         1. HERO SECTION
+         ====================================================================== -->
+    <section class="hero-home1">
+      <div class="container">
+        <div class="hero-grid">
+          <div class="hero-content">
+            <span class="eyebrow">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+              </svg>
+              Annual Residential Property Care
+            </span>
+            <h1 class="hero-title">
+              Complete Home Maintenance Under <span class="text-highlight">One Reliable AMC Plan.</span>
+            </h1>
+            <p class="hero-desc">
+              Eliminate the stress of hunting for local technicians when something breaks. VestaCare protects your
+              residence year-round with scheduled preventive inspections, electrical and plumbing upkeep, AC servicing,
+              and transparent annual coverage.
+            </p>
+            <div class="hero-cta-group">
+              <a href="amc-plans.html" class="btn btn-primary btn-lg">
+                Explore AMC Plans
+                <svg class="icon-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </a>
+              <a href="#covered-services" class="btn btn-secondary btn-lg">
+                View Covered Services
+              </a>
+            </div>
+            <div class="hero-trust-strip">
+              <div>
+                <span class="trust-metric-value tabular-nums">7 Core Trades</span>
+                <span class="trust-metric-label">Electrical, Plumbing, AC &amp; Civil</span>
+              </div>
+              <div>
+                <span class="trust-metric-value tabular-nums">Quarterly</span>
+                <span class="trust-metric-label">Preventive Safety Inspections</span>
+              </div>
+              <div>
+                <span class="trust-metric-value tabular-nums">100% Clear</span>
+                <span class="trust-metric-label">Pre-Defined Annual Inclusions</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-visual-wrapper">
+            <div class="hero-image-frame">
+              <img src="assets/images/hero-home1.jpg"
+                alt="Certified VestaCare maintenance technician inspecting a residential electrical breaker panel with a diagnostic tablet"
+                width="1376" height="768" />
+              <div class="hero-floating-card">
+                <div class="floating-status-left">
+                  <div class="status-icon-badge" aria-hidden="true">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                      stroke-width="2.2">
+                      <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                      <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                    </svg>
+                  </div>
+                  <div>
+                    <span class="floating-card-title">50-Point Preventive Baseline Audit</span>
+                    <span class="floating-card-sub">Electrical load, hydro pressure &amp; HVAC health check</span>
+                  </div>
+                </div>
+                <span class="floating-badge-pill">Included in All Plans</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         2. COVERED SERVICES (7 CORE CATEGORIES — DISTINCT RELATABLE IMAGES)
+         ====================================================================== -->
+    <section id="covered-services" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="eyebrow">Covered Maintenance Scope</span>
+          <h2>Seven Essential Home Services Under One Contract</h2>
+          <p>
+            From seasonal air-conditioner servicing to everyday electrical switches, leaky faucets, and door alignments,
+            our multi-trade technicians handle your home's recurring upkeep.
+          </p>
+        </div>
+
+        <div class="services-grid">
+          <!-- 1. Electrical Maintenance -->
+          <article class="service-card">
+            <div class="service-card-media">
+              <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=900&q=80"
+                onerror="this.onerror=null;this.src='assets/images/service-electrical.jpg'"
+                alt="Certified electrician testing residential circuit breaker panel and switchboard" loading="lazy" />
+              <span class="service-coverage-tag">AMC Covered Labour</span>
+            </div>
+            <div class="service-card-body">
+              <div class="service-icon-box" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                </svg>
+              </div>
+              <h3>Electrical Maintenance</h3>
+              <p>Keep residential power distribution safe and trouble-free with periodic circuit checks and fixture
+                repairs.</p>
+              <ul class="service-task-list">
+                <li>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span>distribution board thermal check</span>
+                </li>
+                <li>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span>Modular switches, sockets</span>
+                </li>
+                <li>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span>Interior light fixture</span>
+                </li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- 2. Plumbing and Leak Repairs -->
+          <article class="service-card">
+            <div class="service-card-media">
+              <img src="https://images.unsplash.com/photo-1585704032915-c3400ca199e7?auto=format&fit=crop&w=900&q=80"
+                onerror="this.onerror=null;this.src='assets/images/service-plumbing.jpg'"
+                alt="Residential plumber repairing sink pipeline and faucet valve with wrench" loading="lazy" />
+              <span class="service-coverage-tag">AMC Covered Labour</span>
+            </div>
+            <div class="service-card-body">
+              <div class="service-icon-box" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path>
+                </svg>
+              </div>
+              <h3>Plumbing &amp; Leak Repairs</h3>
+              <p>Prevent water damage and low-pressure bottlenecks through proactive valve, trap, and pipeline care.</p>
+              <ul class="service-task-list">
+                <li>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span>Tap cartridges, mixer washers</span>
+                </li>
+                <li>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span>Sink bottle-trap clearing</span>
+                </li>
+                <li>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span>Concealed cistern siphon</span>
+                </li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- 3. Air-Conditioning Servicing -->
+          <article class="service-card">
+            <div class="service-card-media">
+              <img src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?auto=format&fit=crop&w=900&q=80"
+                onerror="this.onerror=null;this.src='assets/images/service-ac.jpg'"
+                alt="HVAC technician cleaning and servicing wall-mounted air conditioning unit" loading="lazy" />
+              <span class="service-coverage-tag">Seasonal Scheduled</span>
+            </div>
+            <div class="service-card-body">
+              <div class="service-icon-box" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path
+                    d="M9.59 4.59A2 2 0 1 1 11 8H2m10.59 11.41A2 2 0 1 0 14 16H2m15.73-8.27A2.5 2.5 0 1 1 19.5 12H2">
+                  </path>
+                </svg>
+              </div>
+              <h3>Air-Conditioning Servicing</h3>
+              <p>Maintain peak cooling efficiency and clean indoor air quality with scheduled pre-summer and
+                post-monsoon servicing.</p>
+              <ul class="service-task-list">
+                <li>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span>Indoor evaporator coil, filter</span>
+                </li>
+                <li>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span>Condensate flushing to prevent indoor leaks</span>
+                </li>
+                <li>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span> refrigerant pressure check</span>
+                </li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- 4. Carpentry and Door Repairs -->
+          <article class="service-card">
+            <div class="service-card-media">
+              <img src="https://images.unsplash.com/photo-1504148455328-c376907d081c?auto=format&fit=crop&w=900&q=80"
+                onerror="this.onerror=null;this.src='assets/images/service-carpentry.jpg'"
+                alt="Residential carpentry tools for wooden door hinge and cabinet repair" loading="lazy" />
+              <span class="service-coverage-tag">AMC Covered Labour</span>
+            </div>
+            <div class="service-card-body">
+              <div class="service-icon-box" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path
+                    d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z">
+                  </path>
+                </svg>
+              </div>
+              <h3>Carpentry &amp; Door Repairs</h3>
+              <p>Keep main doors, bedroom shutters, wardrobes, and modular drawers operating smoothly without scraping
+                or jamming.</p>
+              <ul class="service-task-list">
+                <li>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span>Door hinge tightening, planing</span>
+                </li>
+                <li>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span>Mortise locks, latches, tower bolts</span>
+                </li>
+                <li>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span>telescopic drawer channel alignment</span>
+                </li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- 5. Painting and Minor Civil Repairs -->
+          <article class="service-card">
+            <div class="service-card-media">
+              <img src="https://images.unsplash.com/photo-1562259949-e8e7689d7828?auto=format&fit=crop&w=900&q=80"
+                onerror="this.onerror=null;this.src='assets/images/service-painting.jpg'"
+                alt="Painter rolling fresh warm-white paint on residential interior wall" loading="lazy" />
+              <span class="service-coverage-tag">Touch-Up Support</span>
+            </div>
+            <div class="service-card-body">
+              <div class="service-icon-box" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M19 3H5a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2z"></path>
+                  <path d="M12 11v10"></path>
+                </svg>
+              </div>
+              <h3>Painting &amp; Minor Civil Repairs</h3>
+              <p>Preserve spotless interior aesthetics by addressing wall scuffs, hairline plaster cracks, and loose
+                tile joints early.</p>
+              <ul class="service-task-list">
+                <li>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span>Minor wall crack filling, putty smoothing</span>
+                </li>
+                <li>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span> floor joint cement regrouting</span>
+                </li>
+                <li>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span>wall mounting for frames &amp; curtain rods</span>
+                </li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- 6. Bathroom and Kitchen Maintenance -->
+          <article class="service-card">
+            <div class="service-card-media">
+              <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=900&q=80"
+                onerror="this.onerror=null;this.src='assets/images/service-plumbing.jpg'"
+                alt="Modern residential bathroom shower glass and vanity fixture maintenance" loading="lazy" />
+              <span class="service-coverage-tag">Wet-Area Care</span>
+            </div>
+            <div class="service-card-body">
+              <div class="service-icon-box" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                  <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                </svg>
+              </div>
+              <h3>Bathroom &amp; Kitchen Maintenance</h3>
+              <p>Specialized care for high-moisture zones to stop under-counter seepage, mould growth, and fixture
+                scaling.</p>
+              <ul class="service-task-list">
+                <li>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span>Anti-fungal resealing around sinks</span>
+                </li>
+                <li>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span>Showerhead descaling, health-faucet</span>
+                </li>
+                <li>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span>Under-sink cabinet hinge care </span>
+                </li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- 7. General Home Inspections -->
+          <article class="service-card">
+            <div class="service-card-media">
+              <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=900&q=80"
+                onerror="this.onerror=null;this.src='assets/images/service-inspection.jpg'"
+                alt="Scheduled preventive home inspection technician conducting property check" loading="lazy" />
+              <span class="service-coverage-tag">Core AMC Benefit</span>
+            </div>
+            <div class="service-card-body">
+              <div class="service-icon-box" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M9 11l3 3L22 4"></path>
+                  <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
+                </svg>
+              </div>
+              <h3>General Home Inspections</h3>
+              <p>Comprehensive room-by-room diagnostic walkthroughs that catch hidden wear before it turns into a costly
+                emergency.</p>
+              <ul class="service-task-list">
+                <li>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span>50-point electrical &amp; safety audit</span>
+                </li>
+                <li>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span>water-heater safety valve testing</span>
+                </li>
+                <li>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span>Digital property health report </span>
+                </li>
+              </ul>
+            </div>
+          </article>
+        </div>
+
+        <div style="text-align:center; margin-top: var(--space-10);">
+          <a href="services.html" class="btn btn-secondary btn-lg">
+            Explore Full Service Catalogue &amp; Inclusions
+            <svg class="icon-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         3. HOW AMC WORKS (4-STEP VISUAL PROCESS)
+         ====================================================================== -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-header">
+          <span class="eyebrow">Simple Onboarding Journey</span>
+          <h2>How Our Annual Maintenance Contract Works</h2>
+          <p>
+            Getting year-round coverage for your apartment or villa takes four structured, transparent steps.
+          </p>
+        </div>
+
+        <div class="process-steps-grid">
+          <div class="process-step-card">
+            <span class="step-number-badge">01</span>
+            <h3>Choose a Maintenance Plan</h3>
+            <p>
+              Compare our Basic, Standard, and Premium Care packages based on your home size, AC count, and preferred
+              preventive visit frequency.
+            </p>
+          </div>
+
+          <div class="process-step-card">
+            <span class="step-number-badge">02</span>
+            <h3>Submit Property Details</h3>
+            <p>
+              Share your property type, location, and approximate square footage via our online quote form or with our
+              AMC advisory desk.
+            </p>
+          </div>
+
+          <div class="process-step-card">
+            <span class="step-number-badge">03</span>
+            <h3>Schedule Initial Inspection</h3>
+            <p>
+              Our lead engineer conducts a baseline 50-point property health check to log your fixtures, distribution
+              boards, and AC units.
+            </p>
+          </div>
+
+          <div class="process-step-card">
+            <span class="step-number-badge">04</span>
+            <h3>Year-Round Support</h3>
+            <p>
+              Enjoy scheduled seasonal preventive servicing plus hassle-free on-demand repair visits in accordance with
+              your AMC plan terms.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         4. AMC PLAN PREVIEW (EDITABLE SAMPLE INR PRICING)
+         ====================================================================== -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="eyebrow eyebrow-amber">Transparent Annual Packages</span>
+          <h2>Predictable Home Maintenance Plans</h2>
+          <p>
+            Choose an annual contract tailored to your residence. All prices and allowances shown below are editable
+            sample illustrative figures in INR.
+          </p>
+        </div>
+
+        <div class="pricing-grid">
+          <!-- Basic Care -->
+          <div class="pricing-card">
+            <span class="eyebrow">Tier 01 • Essential</span>
+            <h3 class="pricing-tier-name">Basic Care</h3>
+            <p class="pricing-suitability">Ideal for 1–2 BHK Apartments</p>
+            <div class="pricing-amount-box">
+              <span class="pricing-price">₹14,999</span>
+              <span class="pricing-period">/ year (Sample Price)</span>
+              <span class="pricing-sample-note">Illustrative annual rate • Editable per property</span>
+            </div>
+            <div class="pricing-Allowance-pills">
+              <span class="allowance-pill">2 Preventive Visits/Yr</span>
+              <span class="allowance-pill">Up to 6 Breakdown Visits</span>
+            </div>
+            <div class="pricing-features-heading">Included Coverage</div>
+            <ul class="pricing-features">
+              <li>
+                <svg class="icon-included" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>Bi-annual electrical &amp; plumbing preventive audit</span>
+              </li>
+              <li>
+                <svg class="icon-included" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>Minor switch, socket, tap &amp; drain block labour</span>
+              </li>
+              <li>
+                <svg class="icon-included" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>Dry filter servicing for up to 2 Split AC units (once/yr)</span>
+              </li>
+              <li>
+                <svg class="icon-included" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>Standard 24–48 hr technician visit scheduling</span>
+              </li>
+            </ul>
+            <div class="pricing-exclusions-box">
+              <strong>Coverage Limit &amp; Exclusions:</strong>
+              Covers minor repair labour up to 2 hours per visit. Material spares, gas charging &amp; civil renovations
+              billed separately.
+            </div>
+            <a href="contact.html?plan=Basic+Care#quote-form" class="btn btn-secondary btn-block">Select Basic Care</a>
+          </div>
+
+          <!-- Standard Care (Featured) -->
+          <div class="pricing-card featured">
+            <span class="pricing-badge">Most Popular</span>
+            <span class="eyebrow">Tier 02 • Comprehensive</span>
+            <h3 class="pricing-tier-name">Standard Care</h3>
+            <p class="pricing-suitability">Ideal for 2–3 BHK Apartments &amp; Duplexes</p>
+            <div class="pricing-amount-box">
+              <span class="pricing-price">₹26,999</span>
+              <span class="pricing-period">/ year (Sample Price)</span>
+              <span class="pricing-sample-note">Illustrative annual rate • Editable per property</span>
+            </div>
+            <div class="pricing-Allowance-pills">
+              <span class="allowance-pill">4 Quarterly Visits/Yr</span>
+              <span class="allowance-pill">Up to 12 Breakdown Visits</span>
+            </div>
+            <div class="pricing-features-heading">Included Coverage</div>
+            <ul class="pricing-features">
+              <li>
+                <svg class="icon-included" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>Quarterly 50-point electrical, plumbing &amp; dampness audit</span>
+              </li>
+              <li>
+                <svg class="icon-included" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>Wet &amp; dry servicing for up to 3 Split ACs (twice/yr)</span>
+              </li>
+              <li>
+                <svg class="icon-included" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>Carpentry hinge/lock tuning &amp; wet-area silicone resealing</span>
+              </li>
+              <li>
+                <svg class="icon-included" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>Priority same-day / next-day technician response</span>
+              </li>
+            </ul>
+            <div class="pricing-exclusions-box">
+              <strong>Coverage Limit &amp; Exclusions:</strong>
+              Covers minor repair labour &amp; minor fasteners. Replacement fixtures, compressor spares &amp; full-wall
+              repainting excluded.
+            </div>
+            <a href="contact.html?plan=Standard+Care#quote-form" class="btn btn-primary btn-block">Select Standard
+              Care</a>
+          </div>
+
+          <!-- Premium Care -->
+          <div class="pricing-card">
+            <span class="eyebrow eyebrow-amber">Tier 03 • Complete Care</span>
+            <h3 class="pricing-tier-name">Premium Care</h3>
+            <p class="pricing-suitability">Ideal for 4 BHK, Penthouses &amp; Villas</p>
+            <div class="pricing-amount-box">
+              <span class="pricing-price">₹42,999</span>
+              <span class="pricing-period">/ year (Sample Price)</span>
+              <span class="pricing-sample-note">Illustrative annual rate • Editable per property</span>
+            </div>
+            <div class="pricing-Allowance-pills">
+              <span class="allowance-pill">6 Preventive Visits/Yr</span>
+              <span class="allowance-pill">Fair-Use Callouts</span>
+            </div>
+            <div class="pricing-features-heading">Included Coverage</div>
+            <ul class="pricing-features">
+              <li>
+                <svg class="icon-included" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>Bi-monthly full-property inspection &amp; earth-pit testing</span>
+              </li>
+              <li>
+                <svg class="icon-included" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>Comprehensive servicing for up to 5 AC units (twice/yr)</span>
+              </li>
+              <li>
+                <svg class="icon-included" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>Annual wall touch-up painting (up to 40 sq.ft. patch area)</span>
+              </li>
+              <li>
+                <svg class="icon-included" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>Dedicated relationship manager &amp; 4–8 hr priority support</span>
+              </li>
+            </ul>
+            <div class="pricing-exclusions-box">
+              <strong>Coverage Limit &amp; Exclusions:</strong>
+              All preventive &amp; breakdown labour covered. Major spare parts, structural masonry &amp; new
+              installations quoted at actuals.
+            </div>
+            <a href="contact.html?plan=Premium+Care#quote-form" class="btn btn-secondary btn-block">Select Premium
+              Care</a>
+          </div>
+        </div>
+
+        <div style="text-align:center; margin-top: var(--space-10);">
+          <a href="amc-plans.html" class="btn btn-navy btn-lg">
+            Compare All Plan Features Side-by-Side
+            <svg class="icon-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         5. WHY CHOOSE US
+         ====================================================================== -->
+    <section class="section section-navy">
+      <div class="container">
+        <div class="section-header">
+          <span class="eyebrow eyebrow-navy">The VestaCare Standard</span>
+          <h2>Why Homeowners Trust Our Annual Contracts</h2>
+          <p>
+            We replace fragmented, unverified repair visits with institutional-grade residential maintenance protocols.
+          </p>
+        </div>
+
+        <div class="features-grid-3">
+          <div class="feature-box" style="background: var(--bg-navy-card); border-color: rgba(255,255,255,0.1);">
+            <div class="service-icon-box" style="background: rgba(94,234,212,0.14); color: #5EEAD4;">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                <line x1="16" y1="2" x2="16" y2="6"></line>
+                <line x1="8" y1="2" x2="8" y2="6"></line>
+                <line x1="3" y1="10" x2="21" y2="10"></line>
+              </svg>
+            </div>
+            <h3>Scheduled Preventive Maintenance</h3>
+            <p>We don't wait for a pipe to burst or an AC to fail in peak summer. Our calendar-driven visits catch loose
+              connections and clogged drains ahead of time.</p>
+          </div>
+
+          <div class="feature-box" style="background: var(--bg-navy-card); border-color: rgba(255,255,255,0.1);">
+            <div class="service-icon-box" style="background: rgba(94,234,212,0.14); color: #5EEAD4;">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                <circle cx="8.5" cy="7" r="4"></circle>
+                <polyline points="17 11 19 13 23 9"></polyline>
+              </svg>
+            </div>
+            <h3>Professional Technician Support</h3>
+            <p>Every technician is background-verified, uniformed, equipped with calibrated diagnostic tools, and
+              trained to leave your home spotless after every job.</p>
+          </div>
+
+          <div class="feature-box" style="background: var(--bg-navy-card); border-color: rgba(255,255,255,0.1);">
+            <div class="service-icon-box" style="background: rgba(94,234,212,0.14); color: #5EEAD4;">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                <polyline points="14 2 14 8 20 8"></polyline>
+                <line x1="16" y1="13" x2="8" y2="13"></line>
+                <line x1="16" y1="17" x2="8" y2="17"></line>
+              </svg>
+            </div>
+            <h3>Transparent Service Coverage</h3>
+            <p>No surprise visit charges or haggling over minor repair fees. Your contract clearly defines covered
+              labour, visit allowances, and spare-part billing rules.</p>
+          </div>
+
+          <div class="feature-box" style="background: var(--bg-navy-card); border-color: rgba(255,255,255,0.1);">
+            <div class="service-icon-box" style="background: rgba(94,234,212,0.14); color: #5EEAD4;">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path
+                  d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                </path>
+              </svg>
+            </div>
+            <h3>Convenient Service Requests</h3>
+            <p>Log a maintenance request in under a minute via phone helpline, WhatsApp desk, or customer dashboard—and
+              choose a time slot that fits your family's schedule.</p>
+          </div>
+
+          <div class="feature-box" style="background: var(--bg-navy-card); border-color: rgba(255,255,255,0.1);">
+            <div class="service-icon-box" style="background: rgba(94,234,212,0.14); color: #5EEAD4;">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+              </svg>
+            </div>
+            <h3>Dedicated Customer Assistance</h3>
+            <p>Our residential coordination desk tracks every scheduled inspection, sends advance reminders, and
+              maintains a complete service history for your home.</p>
+          </div>
+
+          <div class="feature-box" style="background: var(--bg-navy-card); border-color: rgba(255,255,255,0.1);">
+            <div class="service-icon-box" style="background: rgba(94,234,212,0.14); color: #5EEAD4;">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 16 14"></polyline>
+              </svg>
+            </div>
+            <h3>Zero Hassle for Busy Families &amp; NRIs</h3>
+            <p>Whether you live in the property full-time or manage a residence for elderly parents, we keep every room
+              safe, functional, and well-maintained.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         6. MAINTENANCE REQUEST & COORDINATION PROCESS
+         ====================================================================== -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="eyebrow">Seamless Service Coordination</span>
+          <h2>How Service Visits Work During Your Contract</h2>
+          <p>
+            Whenever you need a repair or when your scheduled quarterly inspection is due, here is how our team
+            coordinates your visit.
+          </p>
+        </div>
+
+        <div class="features-grid-3">
+          <div class="feature-box">
+            <span class="eyebrow eyebrow-amber" style="margin-bottom: var(--space-3);">Stage 1 • Request</span>
+            <h3>1. Raise a Service Enquiry</h3>
+            <p>
+              Contact our support desk via phone, WhatsApp, or your customer dashboard with your AMC contract reference
+              and a brief description of the issue.
+            </p>
+          </div>
+
+          <div class="feature-box">
+            <span class="eyebrow" style="margin-bottom: var(--space-3);">Stage 2 • Confirmation</span>
+            <h3>2. Slot &amp; Technician Assignment</h3>
+            <p>
+              Our dispatch coordinator confirms your preferred appointment window, assigns the appropriate trade
+              specialist, and shares the technician's arrival time before the visit.
+            </p>
+          </div>
+
+          <div class="feature-box">
+            <span class="eyebrow" style="margin-bottom: var(--space-3);">Stage 3 • Resolution</span>
+            <h3>3. Guided Visit &amp; Service Log</h3>
+            <p>
+              The technician arrives in uniform with shoe covers and tools, completes the covered maintenance or
+              inspection checklist, and records the completed work against your annual plan.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         7. SAMPLE TESTIMONIALS (CLEARLY LABELLED FICTIONAL EXAMPLES)
+         ====================================================================== -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-header">
+          <span class="eyebrow eyebrow-amber">Sample Homeowner Scenarios</span>
+          <h2>Illustrative Homeowner Experience Stories</h2>
+          <p>
+            The following are fictional sample testimonials created to demonstrate layout and typical residential AMC
+            use-cases in this website template.
+          </p>
+        </div>
+
+        <div class="testimonials-grid">
+          <article class="testimonial-card">
+            <div>
+              <span class="sample-badge">Sample Illustrative Testimonial</span>
+              <p class="testimonial-quote">
+                "Having four scheduled preventive inspections a year meant our pre-summer AC servicing and bathroom
+                silicone resealing happened right on schedule without having to coordinate three different local
+                vendors."
+              </p>
+            </div>
+            <div class="testimonial-author">
+              <div class="author-avatar" aria-hidden="true">RK</div>
+              <div>
+                <span class="author-name">Rajesh &amp; Meera Kulkarni (Sample)</span>
+                <span class="author-meta">3 BHK Apartment Scenario • Standard Care Plan</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="testimonial-card">
+            <div>
+              <span class="sample-badge">Sample Illustrative Testimonial</span>
+              <p class="testimonial-quote">
+                "We enrolled my parents' duplex in an annual maintenance contract so they never have to negotiate for
+                switchboard repairs, leaking flush valves, or jammed wardrobe doors. One helpline handles it all."
+              </p>
+            </div>
+            <div class="testimonial-author">
+              <div class="author-avatar" aria-hidden="true">AS</div>
+              <div>
+                <span class="author-name">Ananya Sharma (Sample)</span>
+                <span class="author-meta">Independent Duplex Scenario • Premium Care Plan</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="testimonial-card">
+            <div>
+              <span class="sample-badge">Sample Illustrative Testimonial</span>
+              <p class="testimonial-quote">
+                "The initial 50-point baseline audit identified a loose neutral wire in our distribution board and a
+                slow under-sink seepage before it damaged our modular kitchen woodwork. Extremely methodical approach."
+              </p>
+            </div>
+            <div class="testimonial-author">
+              <div class="author-avatar" aria-hidden="true">VM</div>
+              <div>
+                <span class="author-name">Vikramaditya Menon (Sample)</span>
+                <span class="author-meta">4 BHK Villa Scenario • Premium Care Plan</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         8. FREQUENTLY ASKED QUESTIONS (FAQ)
+         ====================================================================== -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="eyebrow">Clarity &amp; Contract Terms</span>
+          <h2>Frequently Asked Questions About Home AMC</h2>
+          <p>
+            Everything you need to know about annual coverage, scheduled visits, spare parts, and renewals.
+          </p>
+        </div>
+
+        <div class="faq-container">
+          <div class="faq-item active">
+            <button type="button" class="faq-question" aria-expanded="true">
+              <span>What exactly is covered under a VestaCare Residential AMC Plan?</span>
+              <span class="faq-icon" aria-hidden="true">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </span>
+            </button>
+            <div class="faq-answer">
+              Our AMC plans cover scheduled preventive maintenance inspections across electrical, plumbing,
+              air-conditioning, carpentry, and wet-area seals, plus technician labour for routine breakdown repairs up
+              to your plan's visit allowance. Minor consumables like insulation tape, Teflon tape, and standard screws
+              are included during visits.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button type="button" class="faq-question" aria-expanded="false">
+              <span>Are replacement spare parts and new fixtures included in the annual price?</span>
+              <span class="faq-icon" aria-hidden="true">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </span>
+            </button>
+            <div class="faq-answer">
+              To keep annual plan pricing fair and transparent, the AMC covers skilled technician labour and preventive
+              servicing. Replacement components (such as new MCBs, taps, flush valves, AC refrigerant gas refills, or
+              light fixtures) can either be provided by the homeowner or procured by our team at transparent actual
+              MRP/invoice cost after your approval.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button type="button" class="faq-question" aria-expanded="false">
+              <span>How frequently are preventive maintenance inspections scheduled?</span>
+              <span class="faq-icon" aria-hidden="true">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </span>
+            </button>
+            <div class="faq-answer">
+              In our sample plan structure, Basic Care includes 2 preventive inspections per year (every 6 months),
+              Standard Care includes 4 quarterly preventive inspections (every 3 months), and Premium Care includes 6
+              bi-monthly preventive inspections alongside seasonal AC servicing.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button type="button" class="faq-question" aria-expanded="false">
+              <span>What is the typical response time when I raise a repair request?</span>
+              <span class="faq-icon" aria-hidden="true">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </span>
+            </button>
+            <div class="faq-answer">
+              Under our illustrative SLA targets, urgent electrical or water-leak callouts on Standard and Premium plans
+              are prioritized for same-day or within 4–8 business hours response, while routine non-urgent adjustments
+              are scheduled within 24–48 hours at your preferred appointment window.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button type="button" class="faq-question" aria-expanded="false">
+              <span>How do annual contract renewals and property handovers work?</span>
+              <span class="faq-icon" aria-hidden="true">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </span>
+            </button>
+            <div class="faq-answer">
+              We send a renewal summary 30 days prior to contract expiry along with an annual property maintenance
+              summary report. There are no automatic hidden charges—you can renew via your customer dashboard, upgrade
+              your tier, or adjust the contract if you lease or renovate the property.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         9. FINAL CONVERSION CTA
+         ====================================================================== -->
+    <section class="section-sm">
+      <div class="container">
+        <div class="cta-banner">
+          <div>
+            <span class="eyebrow eyebrow-navy">Ready for Worry-Free Home Care?</span>
+            <h2>Request a Tailored AMC Quote for Your Property</h2>
+            <p>
+              Share your apartment or villa details to receive a transparent annual maintenance proposal and schedule
+              your initial baseline home inspection.
+            </p>
+          </div>
+          <div class="cta-banner-actions">
+            <a href="contact.html#quote-form" class="btn btn-primary btn-lg">
+              Request AMC Quote
+              <svg class="icon-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+            <a href="amc-plans.html" class="btn btn-outline-white btn-lg">
+              Compare AMC Packages
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========================================================================
+       10. MULTI-COLUMN FOOTER (WHITE IN LIGHT MODE + SOCIAL ICONS WITH HOVER)
+       ======================================================================== -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a href="index.html" class="brand-logo" aria-label="VestaCare Home AMC">
+            <span class="brand-mark" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M3 10.5L12 3l9 7.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1v-9.5z" />
+                <path d="M12 8v3m0 0l2-1.5M12 11l-2-1.5" />
+              </svg>
+            </span>
+            <span class="brand-text">
+              <span class="brand-name">VestaCare</span>
+              <span class="brand-tag">Home AMC Service</span>
+            </span>
+          </a>
+          <p class="footer-brand-desc">
+            Structured annual maintenance contracts for residential apartments, duplexes, and independent villas.
+            Preventive care, reliable technicians, and transparent coverage.
+          </p>
+          <!-- Social Icons in Footer -->
+          <div class="social-links" aria-label="Social Media Links">
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn"
+              aria-label="Follow VestaCare on Facebook">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+              </svg>
+            </a>
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn"
+              aria-label="Follow VestaCare on X">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M4 4l11.733 16h4.267l-11.733 -16z"></path>
+                <path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772"></path>
+              </svg>
+            </a>
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn"
+              aria-label="Follow VestaCare on Instagram">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+              </svg>
+            </a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn"
+              aria-label="Follow VestaCare on LinkedIn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                <rect x="2" y="9" width="4" height="12"></rect>
+                <circle cx="4" cy="4" r="2"></circle>
+              </svg>
+            </a>
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn"
+              aria-label="Subscribe to VestaCare on YouTube">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path
+                  d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z">
+                </path>
+                <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="footer-col-title">Covered Services</h3>
+          <ul class="footer-links">
+            <li><a href="services.html#electrical">Electrical Maintenance</a></li>
+            <li><a href="services.html#plumbing">Plumbing &amp; Leak Repairs</a></li>
+            <li><a href="services.html#ac-maintenance">AC Servicing &amp; HVAC</a></li>
+            <li><a href="services.html#carpentry">Carpentry &amp; Door Repairs</a></li>
+            <li><a href="services.html#painting-civil">Painting &amp; Minor Civil</a></li>
+            <li><a href="services.html#general-inspection">Preventive Inspections</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="footer-col-title">AMC Packages</h3>
+          <ul class="footer-links">
+            <li><a href="amc-plans.html">Basic Care Plan</a></li>
+            <li><a href="amc-plans.html">Standard Care Plan</a></li>
+            <li><a href="amc-plans.html">Premium Care Plan</a></li>
+            <li><a href="amc-plans.html#comparison-table">Plan Comparison Matrix</a></li>
+            <li><a href="amc-plans.html#exclusions">Inclusions &amp; Exclusions</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="footer-col-title">Company &amp; Portal</h3>
+          <ul class="footer-links">
+            <li><a href="index.html">Home 1 — Classic</a></li>
+            <li><a href="home-2.html">Home 2 — Editorial</a></li>
+            <li><a href="about.html">About VestaCare</a></li>
+            <li><a href="contact.html">Contact &amp; Quote Desk</a></li>
+            <li><a href="dashboard.html">Customer Dashboard</a></li>
+            <li><a href="signup.html">Register Property</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="footer-col-title">Contact &amp; Helpline</h3>
+          <div class="footer-contact-list">
+            <div class="footer-contact-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path
+                  d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                </path>
+              </svg>
+              <span>+91 (800) 456-7890 (Sample Helpline)</span>
+            </div>
+            <div class="footer-contact-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+              <span>care@vestacare-amc.example.com</span>
+            </div>
+            <div class="footer-contact-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+              <span>Suite 402, Crestview Business Park, Indiranagar, Bengaluru 560038</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-disclaimer">
+        <strong>Template Demonstration Notice:</strong> All AMC plan prices in INR, visit counts, response times,
+        coverage limits, and testimonials displayed on this website are editable sample data for template demonstration
+        purposes and do not constitute binding commercial commitments.
+      </div>
+
+      <div class="footer-bottom">
+        <span>&copy; 2026 VestaCare Home AMC Service Template. All rights reserved.</span>
+        <span>Designed for Residential Property Maintenance &amp; Annual Care Contracts.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>

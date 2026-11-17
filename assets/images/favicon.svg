@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 42 42" width="42" height="42">
+  <defs>
+    <linearGradient id="vestacare-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0F1E36" />
+      <stop offset="100%" stop-color="#1D7A74" />
+    </linearGradient>
+  </defs>
+  <rect width="42" height="42" rx="10" fill="url(#vestacare-grad)" />
+  <g transform="translate(9, 9)" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M3 10.5L12 3l9 7.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1v-9.5z" />
+    <path d="M12 8v3m0 0l2-1.5M12 11l-2-1.5" />
+  </g>
+</svg>
+

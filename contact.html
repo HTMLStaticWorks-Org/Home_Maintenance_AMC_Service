@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Request an AMC Quote &amp; Contact Us — VestaCare Home AMC</title>
+  <meta name="description" content="Request a tailored Annual Maintenance Contract (AMC) quote for your residential apartment, duplex, or villa. Contact VestaCare via phone, email, WhatsApp, or online enquiry." />
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg" />
+  <script>
+    (function() {
+      var savedTheme = localStorage.getItem('vestacare_theme');
+      if (savedTheme === 'dark' || savedTheme === 'light') {
+        document.documentElement.setAttribute('data-theme', savedTheme);
+      }
+      var savedDir = localStorage.getItem('vestacare_dir');
+      if (savedDir === 'rtl' || savedDir === 'ltr') {
+        document.documentElement.setAttribute('dir', savedDir);
+      }
+    })();
+  </script>
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- ========================================================================
+       STICKY NAVBAR
+       Order: Home | About | Services | AMC Plans | Contact | Dashboard
+       Actions: RTL | Theme Toggle | Sign Up
+       ======================================================================== -->
+  <header class="site-header" role="banner">
+    <div class="navbar-container">
+      <a href="index.html" class="brand-logo" aria-label="VestaCare Home AMC Home">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 10.5L12 3l9 7.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1v-9.5z"/>
+            <path d="M12 8v3m0 0l2-1.5M12 11l-2-1.5"/>
+          </svg>
+        </span>
+        <span class="brand-text">
+          <span class="brand-name">VestaCare</span>
+          <span class="brand-tag">Home AMC Service</span>
+        </span>
+      </a>
+
+      <nav class="nav-menu-desktop" aria-label="Primary Navigation">
+        <div class="nav-item has-dropdown">
+          <button type="button" class="nav-link dropdown-toggle-btn" aria-expanded="false" aria-haspopup="true">
+            Home
+            <svg class="dropdown-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </button>
+          <div class="dropdown-menu" role="menu" aria-label="Home Variations">
+            <a href="index.html" class="dropdown-item" role="menuitem">
+              <span class="dropdown-item-icon" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                </svg>
+              </span>
+              <span>
+                <span class="dropdown-item-title">Home 1 — Classic AMC</span>
+                <span class="dropdown-item-desc">Complete residential maintenance overview &amp; plan walkthrough</span>
+              </span>
+            </a>
+            <a href="home-2.html" class="dropdown-item" role="menuitem">
+              <span class="dropdown-item-icon" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="3" y="3" width="7" height="7"></rect>
+                  <rect x="14" y="3" width="7" height="7"></rect>
+                  <rect x="14" y="14" width="7" height="7"></rect>
+                  <rect x="3" y="14" width="7" height="7"></rect>
+                </svg>
+              </span>
+              <span>
+                <span class="dropdown-item-title">Home 2 — Editorial Care</span>
+                <span class="dropdown-item-desc">Interactive plan estimator, tabbed trade matrix &amp; seasonal timeline</span>
+              </span>
+            </a>
+          </div>
+        </div>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="amc-plans.html" class="nav-link">AMC Plans</a>
+        <a href="contact.html" class="nav-link active">Contact</a>
+        <a href="dashboard.html" class="nav-link">Dashboard</a>
+      </nav>
+
+      <div class="nav-actions-desktop">
+        <button type="button" class="rtl-toggle-btn" aria-label="Toggle RTL layout" title="Toggle RTL">RTL</button>
+        <button type="button" class="theme-toggle-btn" aria-label="Switch to dark theme" title="Toggle Light/Dark Theme">
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+        </button>
+        <span class="nav-divider" aria-hidden="true"></span>
+        <a href="signup.html" class="nav-auth-signup">Sign Up</a>
+      </div>
+
+      <div class="nav-mobile-controls">
+        <button type="button" id="hamburger-btn" class="hamburger-btn" aria-expanded="false" aria-controls="mobile-nav-drawer" aria-label="Open navigation menu">
+          <svg class="icon-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+          <svg class="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <div id="mobile-nav-drawer" class="mobile-nav-drawer" aria-label="Mobile Navigation">
+      <div class="mobile-nav-list">
+        <div>
+          <button type="button" id="mobile-home-dropdown-btn" class="mobile-nav-link" aria-expanded="false">
+            <span>Home Variations</span>
+            <svg class="dropdown-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </button>
+          <div id="mobile-home-submenu" class="mobile-dropdown-submenu">
+            <a href="index.html" class="mobile-submenu-link">Home 1 — Classic AMC Overview</a>
+            <a href="home-2.html" class="mobile-submenu-link">Home 2 — Editorial &amp; Interactive</a>
+          </div>
+        </div>
+        <a href="about.html" class="mobile-nav-link">About</a>
+        <a href="services.html" class="mobile-nav-link">Services</a>
+        <a href="amc-plans.html" class="mobile-nav-link">AMC Plans</a>
+        <a href="contact.html" class="mobile-nav-link active">Contact</a>
+        <a href="dashboard.html" class="mobile-nav-link">Dashboard</a>
+      </div>
+      <div class="mobile-nav-actions">
+        <div class="mobile-utility-btns">
+          <button type="button" class="rtl-toggle-btn" aria-label="Toggle RTL layout">RTL</button>
+          <button type="button" class="theme-toggle-btn" aria-label="Switch to dark theme">
+            <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+            <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="5"></circle>
+              <line x1="12" y1="1" x2="12" y2="3"></line>
+              <line x1="12" y1="21" x2="12" y2="23"></line>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+              <line x1="1" y1="12" x2="3" y2="12"></line>
+              <line x1="21" y1="12" x2="23" y2="12"></line>
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+            </svg>
+          </button>
+        </div>
+        <a href="signup.html" class="btn btn-primary btn-block">Sign Up</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <!-- ======================================================================
+         UNIFORM NON-HOME PAGE HERO (CENTERED CONTENT & UNIFORM HEIGHT)
+         ====================================================================== -->
+    <section class="page-hero">
+      <div class="container">
+        <div class="page-hero-inner">
+          <span class="eyebrow eyebrow-navy">Direct Customer Assistance</span>
+          <h1>Request an Annual Maintenance Quote for Your Residence</h1>
+          <p>
+            Share your property details below to receive a customized AMC coverage proposal, or reach our residential support desk directly via phone, email, or WhatsApp.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         MAIN CONTACT & QUOTE FORM SECTION
+         ====================================================================== -->
+    <section class="section">
+      <div class="container">
+        <div class="hero-grid" style="grid-template-columns: 0.85fr 1.15fr; align-items: start;">
+
+          <!-- Left Column: Direct Contact Channels, Social Icons & Interactive Embedded Map -->
+          <div style="display:flex; flex-direction:column; gap: var(--space-5);">
+            <div class="feature-box">
+              <span class="eyebrow" style="margin-bottom: var(--space-2);">Direct Channels</span>
+              <h3>Residential AMC Support Desk</h3>
+              <p style="font-size:0.9rem; margin-bottom: var(--space-5);">
+                Speak with an AMC advisor about plan suitability, initial property inspections, or ongoing contract assistance.
+              </p>
+
+              <div style="display:flex; flex-direction:column; gap: var(--space-4); width: 100%; text-align: left;">
+                <!-- Phone -->
+                <div style="display:flex; align-items:flex-start; gap: var(--space-3);">
+                  <div class="service-icon-box" style="margin:0; width:42px; height:42px;">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                  </div>
+                  <div>
+                    <strong style="display:block; font-size:0.9rem;">Phone Helpline (Sample)</strong>
+                    <a href="tel:+918004567890" style="color:var(--accent-primary); font-weight:700; font-size:1rem; display:block;">+91 (800) 456-7890</a>
+                    <span style="display:block; font-size:0.78rem; color:var(--text-muted);">Mon – Sun, 08:00 AM to 08:00 PM IST</span>
+                  </div>
+                </div>
+
+                <!-- Email -->
+                <div style="display:flex; align-items:flex-start; gap: var(--space-3);">
+                  <div class="service-icon-box" style="margin:0; width:42px; height:42px;">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                  </div>
+                  <div>
+                    <strong style="display:block; font-size:0.9rem;">Email Support &amp; Proposals</strong>
+                    <a href="mailto:quotes@vestacare-amc.example.com" style="color:var(--accent-primary); font-weight:600; font-size:0.92rem; display:block;">quotes@vestacare-amc.example.com</a>
+                    <span style="display:block; font-size:0.78rem; color:var(--text-muted);">care@vestacare-amc.example.com</span>
+                  </div>
+                </div>
+
+                <!-- WhatsApp Contact Option -->
+                <div style="background: var(--bg-surface-alt); border: 1px solid var(--border-accent); border-radius: var(--radius-md); padding: var(--space-4);">
+                  <div style="display:flex; align-items:center; justify-content:space-between; gap: var(--space-3); flex-wrap:wrap;">
+                    <div>
+                      <strong style="display:block; font-size:0.92rem; color:var(--text-primary);">WhatsApp AMC Consultation</strong>
+                      <span style="font-size:0.8rem; color:var(--text-secondary); display:block;">Instant brochure &amp; inspection slot chat</span>
+                    </div>
+                    <a href="#quote-form" onclick="document.getElementById('customer-message').value='Please reach out to me on WhatsApp regarding an AMC quote.'; document.getElementById('customer-name').focus();" class="btn btn-primary btn-sm">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+                      WhatsApp Desk
+                    </a>
+                  </div>
+                </div>
+
+                <!-- Social Icons on Contact Page -->
+                <div style="padding-top: var(--space-3); border-top: 1px solid var(--border-subtle); text-align:center;">
+                  <strong style="display:block; font-size:0.86rem; margin-bottom: var(--space-3); color:var(--text-primary);">Connect With Us on Social Media</strong>
+                  <div class="social-links" style="justify-content:center;" aria-label="Contact Page Social Media Links">
+                    <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Facebook">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+                    </a>
+                    <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="X Twitter">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4l11.733 16h4.267l-11.733 -16z"></path><path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772"></path></svg>
+                    </a>
+                    <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Instagram">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                    </a>
+                    <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="LinkedIn">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                    </a>
+                    <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="YouTube">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Office Address & Embedded Map -->
+            <div class="feature-box">
+              <span class="eyebrow eyebrow-amber" style="margin-bottom: var(--space-2);">Operations Hub &amp; Map</span>
+              <h3>Head Office &amp; Dispatch Centre</h3>
+              <p style="font-size:0.9rem; margin-bottom: var(--space-4);">
+                <strong>VestaCare Residential Services (Sample Office)</strong><br />
+                Suite 402, 4th Floor, Crestview Business Park,<br />
+                100 Feet Road, Indiranagar, Bengaluru — 560038, Karnataka
+              </p>
+
+              <!-- Embedded Interactive Map -->
+              <div style="width:100%; height: 240px; border-radius: var(--radius-md); overflow:hidden; border: 1px solid var(--border-strong); background: var(--navy-900);">
+                <iframe
+                  title="VestaCare Operations Centre Location Map — Indiranagar, Bengaluru"
+                  src="https://www.openstreetmap.org/export/embed.html?bbox=77.6300%2C12.9650%2C77.6500%2C12.9850&amp;layer=mapnik&amp;marker=12.9784%2C77.6408"
+                  style="width:100%; height:100%; border:0;"
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Quote Enquiry Form -->
+          <div class="form-card big-card">
+            <span class="eyebrow">Online AMC Enquiry Form</span>
+            <h2 style="font-size:1.65rem; margin-bottom: var(--space-2); text-align:center;">Request Your Property Maintenance Quote</h2>
+            <p style="font-size:0.92rem; margin-bottom: var(--space-6); text-align:center;">
+              Complete the form below. Fields marked with <span style="color:var(--danger-600);">*</span> are required for preparing an accurate annual coverage estimate.
+            </p>
+
+            <form id="quote-form" novalidate>
+              <!-- Row 1: Name & Email -->
+              <div class="form-grid-2">
+                <div class="form-group">
+                  <label for="customer-name" class="form-label">Customer Full Name <span class="required">*</span></label>
+                  <input type="text" id="customer-name" name="customerName" class="form-control" placeholder="e.g., Rohan Mehta" required />
+                  <span class="form-error-msg">Please enter your full name (minimum 2 characters).</span>
+                </div>
+
+                <div class="form-group">
+                  <label for="customer-email" class="form-label">Email Address <span class="required">*</span></label>
+                  <input type="email" id="customer-email" name="customerEmail" class="form-control" placeholder="e.g., rohan@example.com" required />
+                  <span class="form-error-msg">Please enter a valid email address.</span>
+                </div>
+              </div>
+
+              <!-- Row 2: Phone & Property Type -->
+              <div class="form-grid-2">
+                <div class="form-group">
+                  <label for="customer-phone" class="form-label">Phone / WhatsApp Number <span class="required">*</span></label>
+                  <input type="tel" id="customer-phone" name="customerPhone" class="form-control" placeholder="e.g., +91 98450 12345" required />
+                  <span class="form-error-msg">Please enter a valid 10-digit phone number.</span>
+                </div>
+
+                <div class="form-group">
+                  <label for="property-type" class="form-label">Property Type <span class="required">*</span></label>
+                  <select id="property-type" name="propertyType" class="form-control" required>
+                    <option value="">Select property type...</option>
+                    <option value="Apartment / Flat">Apartment / Residential Flat</option>
+                    <option value="Duplex / Row House">Duplex / Row House</option>
+                    <option value="Independent Villa / Bungalow">Independent Villa / Bungalow</option>
+                    <option value="Penthouse">Penthouse Residence</option>
+                    <option value="Multiple Residential Units">Multiple Units / Landlord Portfolio</option>
+                  </select>
+                  <span class="form-error-msg">Please select your residential property type.</span>
+                </div>
+              </div>
+
+              <!-- Row 3: Property Location & Approximate Property Size -->
+              <div class="form-grid-2">
+                <div class="form-group">
+                  <label for="property-location" class="form-label">Property Location (City &amp; Area) <span class="required">*</span></label>
+                  <input type="text" id="property-location" name="propertyLocation" class="form-control" placeholder="e.g., Whitefield, Bengaluru" required />
+                  <span class="form-error-msg">Please enter your property neighbourhood and city.</span>
+                </div>
+
+                <div class="form-group">
+                  <label for="property-size" class="form-label">Approximate Property Size <span class="required">*</span></label>
+                  <select id="property-size" name="propertySize" class="form-control" required>
+                    <option value="">Select approximate area...</option>
+                    <option value="Under 1,200 sq.ft. (1–2 BHK)">Under 1,200 sq.ft. (1–2 BHK)</option>
+                    <option value="1,200 – 2,200 sq.ft. (2–3 BHK)">1,200 – 2,200 sq.ft. (2–3 BHK)</option>
+                    <option value="2,200 – 3,500 sq.ft. (4 BHK / Duplex)">2,200 – 3,500 sq.ft. (4 BHK / Duplex)</option>
+                    <option value="3,500 – 5,500+ sq.ft. (Independent Villa)">3,500 – 5,500+ sq.ft. (Independent Villa)</option>
+                  </select>
+                  <span class="form-error-msg">Please select your approximate property size.</span>
+                </div>
+              </div>
+
+              <!-- Row 4: Services Required Checkboxes -->
+              <div id="services-group" class="form-group">
+                <span class="form-label">Services Required in Your AMC <span class="required">*</span></span>
+                <div class="checkbox-grid" role="group" aria-label="Services Required">
+                  <label class="checkbox-pill">
+                    <input type="checkbox" name="services" value="Electrical Maintenance" checked />
+                    <span>Electrical Maintenance</span>
+                  </label>
+                  <label class="checkbox-pill">
+                    <input type="checkbox" name="services" value="Plumbing & Leak Repairs" checked />
+                    <span>Plumbing &amp; Leak Repairs</span>
+                  </label>
+                  <label class="checkbox-pill">
+                    <input type="checkbox" name="services" value="AC Servicing" checked />
+                    <span>AC Servicing &amp; HVAC</span>
+                  </label>
+                  <label class="checkbox-pill">
+                    <input type="checkbox" name="services" value="Carpentry & Door Repairs" />
+                    <span>Carpentry &amp; Doors</span>
+                  </label>
+                  <label class="checkbox-pill">
+                    <input type="checkbox" name="services" value="Painting & Minor Civil" />
+                    <span>Painting &amp; Minor Civil</span>
+                  </label>
+                  <label class="checkbox-pill">
+                    <input type="checkbox" name="services" value="Preventive Inspections" checked />
+                    <span>Preventive Home Audits</span>
+                  </label>
+                </div>
+                <span class="form-error-msg">Please select at least one maintenance service category.</span>
+              </div>
+
+              <!-- Row 5: Preferred AMC Plan -->
+              <div class="form-group">
+                <label for="preferred-plan" class="form-label">Preferred AMC Plan <span class="required">*</span></label>
+                <select id="preferred-plan" name="preferredPlan" class="form-control" required>
+                  <option value="">Choose a plan tier...</option>
+                  <option value="Basic Care — ₹14,999/yr (Sample)">Basic Care — ₹14,999/yr (Sample Rate • 2 Preventive Visits)</option>
+                  <option value="Standard Care — ₹26,999/yr (Sample)" selected>Standard Care — ₹26,999/yr (Sample Rate • 4 Quarterly Visits ★)</option>
+                  <option value="Premium Care — ₹42,999/yr (Sample)">Premium Care — ₹42,999/yr (Sample Rate • 6 Bi-Monthly Visits)</option>
+                  <option value="Custom Property Proposal">Need Custom Villa / Multi-Unit Proposal</option>
+                </select>
+                <span class="form-error-msg">Please select a preferred AMC plan option.</span>
+              </div>
+
+              <!-- Row 6: Message -->
+              <div class="form-group">
+                <label for="customer-message" class="form-label">Additional Property Details or Questions</label>
+                <textarea id="customer-message" name="customerMessage" rows="3" class="form-control" placeholder="Mention number of AC units, bathrooms, age of property, or preferred time for an initial baseline inspection..."></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-lg btn-block">
+                Submit AMC Quote Enquiry
+                <svg class="icon-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </button>
+
+              <div id="quote-feedback" class="form-feedback-alert" role="status" aria-live="polite"></div>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========================================================================
+       FOOTER (WHITE IN LIGHT MODE + SOCIAL ICONS WITH HOVER)
+       ======================================================================== -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a href="index.html" class="brand-logo" aria-label="VestaCare Home AMC">
+            <span class="brand-mark" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M3 10.5L12 3l9 7.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1v-9.5z"/>
+                <path d="M12 8v3m0 0l2-1.5M12 11l-2-1.5"/>
+              </svg>
+            </span>
+            <span class="brand-text">
+              <span class="brand-name">VestaCare</span>
+              <span class="brand-tag">Home AMC Service</span>
+            </span>
+          </a>
+          <p class="footer-brand-desc">
+            Structured annual maintenance contracts for residential apartments, duplexes, and independent villas. Preventive care, reliable technicians, and transparent coverage.
+          </p>
+          <div class="social-links" aria-label="Social Media Links">
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Follow VestaCare on Facebook">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+            </a>
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Follow VestaCare on X">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4l11.733 16h4.267l-11.733 -16z"></path><path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772"></path></svg>
+            </a>
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Follow VestaCare on Instagram">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+            </a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Follow VestaCare on LinkedIn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+            </a>
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Subscribe to VestaCare on YouTube">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="footer-col-title">Covered Services</h3>
+          <ul class="footer-links">
+            <li><a href="services.html#electrical">Electrical Maintenance</a></li>
+            <li><a href="services.html#plumbing">Plumbing &amp; Leak Repairs</a></li>
+            <li><a href="services.html#ac-maintenance">AC Servicing &amp; HVAC</a></li>
+            <li><a href="services.html#carpentry">Carpentry &amp; Door Repairs</a></li>
+            <li><a href="services.html#painting-civil">Painting &amp; Minor Civil</a></li>
+            <li><a href="services.html#general-inspection">Preventive Inspections</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="footer-col-title">AMC Packages</h3>
+          <ul class="footer-links">
+            <li><a href="amc-plans.html">Basic Care Plan</a></li>
+            <li><a href="amc-plans.html">Standard Care Plan</a></li>
+            <li><a href="amc-plans.html">Premium Care Plan</a></li>
+            <li><a href="amc-plans.html#comparison-table">Plan Comparison Matrix</a></li>
+            <li><a href="amc-plans.html#exclusions">Inclusions &amp; Exclusions</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="footer-col-title">Company &amp; Portal</h3>
+          <ul class="footer-links">
+            <li><a href="index.html">Home 1 — Classic</a></li>
+            <li><a href="home-2.html">Home 2 — Editorial</a></li>
+            <li><a href="about.html">About VestaCare</a></li>
+            <li><a href="contact.html">Contact &amp; Quote Desk</a></li>
+            <li><a href="dashboard.html">Customer Dashboard</a></li>
+            <li><a href="signup.html">Register Property</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="footer-col-title">Contact &amp; Helpline</h3>
+          <div class="footer-contact-list">
+            <div class="footer-contact-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+              <span>+91 (800) 456-7890 (Sample Helpline)</span>
+            </div>
+            <div class="footer-contact-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              <span>care@vestacare-amc.example.com</span>
+            </div>
+            <div class="footer-contact-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+              <span>Suite 402, Crestview Business Park, Indiranagar, Bengaluru 560038</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-disclaimer">
+        <strong>Template Demonstration Notice:</strong> All AMC plan prices in INR, visit counts, response times, coverage limits, and contact details displayed on this website are editable sample data for template demonstration purposes.
+      </div>
+
+      <div class="footer-bottom">
+        <span>&copy; 2026 VestaCare Home AMC Service Template. All rights reserved.</span>
+        <span>Designed for Residential Property Maintenance &amp; Annual Care Contracts.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

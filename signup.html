@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Create Homeowner Account — VestaCare Home AMC Service</title>
+  <meta name="description" content="Register your residential property with VestaCare Home AMC to streamline annual maintenance enquiries and scheduled preventive inspection coordination." />
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg" />
+  <script>
+    (function() {
+      var savedTheme = localStorage.getItem('vestacare_theme');
+      if (savedTheme === 'dark' || savedTheme === 'light') {
+        document.documentElement.setAttribute('data-theme', savedTheme);
+      }
+      var savedDir = localStorage.getItem('vestacare_dir');
+      if (savedDir === 'rtl' || savedDir === 'ltr') {
+        document.documentElement.setAttribute('dir', savedDir);
+      }
+    })();
+  </script>
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body class="no-fixed-header">
+  <main id="main-content" class="auth-standalone-page">
+    <div class="auth-single-card">
+      <!-- Brand Logo & Brand Name in Top Center Inside Card -->
+      <div class="auth-card-brand-header">
+        <a href="index.html" class="brand-logo" aria-label="VestaCare Home AMC Home">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 10.5L12 3l9 7.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1v-9.5z"/>
+              <path d="M12 8v3m0 0l2-1.5M12 11l-2-1.5"/>
+            </svg>
+          </span>
+          <span class="brand-text">
+            <span class="brand-name">VestaCare</span>
+            <span class="brand-tag">Home AMC Service</span>
+          </span>
+        </a>
+      </div>
+
+      <div style="text-align:center;">
+        <span class="eyebrow">Customer Registration</span>
+      </div>
+      <h1>Create Homeowner Account</h1>
+      <p class="auth-subtitle">
+        Complete your contact and residential property details below.
+      </p>
+
+      <form id="signup-form" novalidate>
+        <!-- Separate Line 1: Full Name -->
+        <div class="form-group">
+          <label for="signup-name" class="form-label">Full Name <span class="required">*</span></label>
+          <input type="text" id="signup-name" class="form-control" placeholder="e.g., Siddharth Verma" required />
+          <span class="form-error-msg">Please enter your full name (minimum 2 characters).</span>
+        </div>
+
+        <!-- Separate Line 2: Email Address -->
+        <div class="form-group">
+          <label for="signup-email" class="form-label">Email Address <span class="required">*</span></label>
+          <input type="email" id="signup-email" class="form-control" placeholder="e.g., siddharth@example.com" required />
+          <span class="form-error-msg">Please enter a valid email address.</span>
+        </div>
+
+        <!-- Separate Line 3: Phone Number -->
+        <div class="form-group">
+          <label for="signup-phone" class="form-label">Phone Number <span class="required">*</span></label>
+          <input type="tel" id="signup-phone" class="form-control" placeholder="e.g., +91 98200 12345" required />
+          <span class="form-error-msg">Please enter a valid 10-digit mobile number.</span>
+        </div>
+
+        <!-- Separate Line 4: Password -->
+        <div class="form-group">
+          <label for="signup-password" class="form-label">Password <span class="required">*</span></label>
+          <div class="password-input-wrapper">
+            <input type="password" id="signup-password" class="form-control" placeholder="Min. 8 characters" required style="padding-right: 68px;" />
+            <button type="button" class="password-toggle-btn" data-target="signup-password" aria-label="Show password">Show</button>
+          </div>
+          <span id="password-strength-text" style="font-size:0.76rem; font-weight:600;"></span>
+          <span class="form-error-msg">Password must be at least 8 characters long.</span>
+        </div>
+
+        <!-- Separate Line 5: Confirm Password -->
+        <div class="form-group">
+          <label for="signup-confirm-password" class="form-label">Confirm Password <span class="required">*</span></label>
+          <div class="password-input-wrapper">
+            <input type="password" id="signup-confirm-password" class="form-control" placeholder="Re-enter password" required style="padding-right: 68px;" />
+            <button type="button" class="password-toggle-btn" data-target="signup-confirm-password" aria-label="Show confirm password">Show</button>
+          </div>
+          <span class="form-error-msg">Passwords do not match.</span>
+        </div>
+
+        <!-- Separate Line 6: Property Type -->
+        <div class="form-group">
+          <label for="signup-property-type" class="form-label">Property Type <span class="required">*</span></label>
+          <select id="signup-property-type" class="form-control" required>
+            <option value="">Select property type...</option>
+            <option value="Apartment / Flat">Apartment / Residential Flat</option>
+            <option value="Duplex / Row House">Duplex / Row House</option>
+            <option value="Independent Villa">Independent Villa / Bungalow</option>
+            <option value="Penthouse">Penthouse Residence</option>
+          </select>
+          <span class="form-error-msg">Please select your residential property type.</span>
+        </div>
+
+        <!-- Separate Line 7: City / Location -->
+        <div class="form-group">
+          <label for="signup-city" class="form-label">City / Location <span class="required">*</span></label>
+          <input type="text" id="signup-city" class="form-control" placeholder="e.g., Koramangala, Bengaluru" required />
+          <span class="form-error-msg">Please enter your city and locality.</span>
+        </div>
+
+        <!-- Separate Line 8: Privacy Policy Consent -->
+        <div id="consent-group" class="form-group" style="margin-top: var(--space-2);">
+          <label style="display:flex; align-items:flex-start; gap:10px; font-size:0.86rem; color:var(--text-secondary); cursor:pointer;">
+            <input type="checkbox" id="signup-consent" required style="width:17px; height:17px; margin-top:2px; accent-color:var(--accent-primary); flex-shrink:0;" />
+            <span>I agree to the VestaCare Home AMC Terms of Service and Privacy Policy, and consent to receive property maintenance communications. <span style="color:var(--danger-600);">*</span></span>
+          </label>
+          <span class="form-error-msg">You must accept the privacy policy and terms to register.</span>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-lg btn-block" style="margin-top: var(--space-2);">
+          Create Homeowner Account
+          <svg class="icon-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </button>
+
+        <div id="signup-feedback" class="form-feedback-alert" role="status" aria-live="polite"></div>
+      </form>
+
+      <!-- Google and Apple Social Login Icons at Bottom -->
+      <div class="auth-divider">
+        <span>Or sign up with</span>
+      </div>
+
+      <div class="social-auth-grid">
+        <button type="button" class="social-auth-btn" data-provider="Google" aria-label="Sign up with Google">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path fill="#EA4335" d="M12 5c1.6 0 3 .6 4.1 1.7l3.1-3.1C17.3 1.8 14.8 1 12 1 7.4 1 3.5 3.6 1.6 7.4l3.7 2.8C6.2 7.2 8.9 5 12 5z"/>
+            <path fill="#4285F4" d="M23.5 12.3c0-.8-.1-1.6-.2-2.3H12v4.5h6.5c-.3 1.5-1.1 2.8-2.4 3.6l3.7 2.9c2.2-2 3.7-5 3.7-8.7z"/>
+            <path fill="#FBBC05" d="M5.3 14.8c-.2-.8-.4-1.6-.4-2.5s.2-1.7.4-2.5L1.6 7C.6 9 0 11.2 0 12.3s.6 3.3 1.6 5.3l3.7-2.8z"/>
+            <path fill="#34A853" d="M12 23.6c3.2 0 6-1.1 8-3l-3.7-2.9c-1.1.7-2.5 1.2-4.3 1.2-3.1 0-5.8-2.1-6.7-5L1.6 16.7c1.9 3.9 5.8 6.9 10.4 6.9z"/>
+          </svg>
+          <span>Google</span>
+        </button>
+
+        <button type="button" class="social-auth-btn" data-provider="Apple" aria-label="Sign up with Apple">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.53 4.08zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"/>
+          </svg>
+          <span>Apple</span>
+        </button>
+      </div>
+
+      <div style="margin-top: var(--space-6); padding-top: var(--space-4); border-top: 1px solid var(--border-subtle); text-align:center; font-size:0.9rem;">
+        <span style="color:var(--text-secondary);">Already have a VestaCare account?</span>
+        <a href="login.html" style="color:var(--accent-primary); font-weight:700; margin-left:6px;">Login Here &rarr;</a>
+      </div>
+    </div>
+  </main>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

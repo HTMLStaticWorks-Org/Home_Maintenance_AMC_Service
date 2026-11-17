@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Residential Maintenance Services Catalogue — VestaCare Home AMC</title>
+  <meta name="description" content="Detailed residential maintenance catalogue covering Electrical, Plumbing, AC Servicing, Carpentry, Painting & Civil, and General Home Inspections with clear AMC inclusion details." />
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg" />
+  <script>
+    (function() {
+      var savedTheme = localStorage.getItem('vestacare_theme');
+      if (savedTheme === 'dark' || savedTheme === 'light') {
+        document.documentElement.setAttribute('data-theme', savedTheme);
+      }
+      var savedDir = localStorage.getItem('vestacare_dir');
+      if (savedDir === 'rtl' || savedDir === 'ltr') {
+        document.documentElement.setAttribute('dir', savedDir);
+      }
+    })();
+  </script>
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- ========================================================================
+       STICKY NAVBAR
+       Order: Home | About | Services | AMC Plans | Contact | Dashboard
+       Actions: RTL | Theme Toggle | Sign Up
+       ======================================================================== -->
+  <header class="site-header" role="banner">
+    <div class="navbar-container">
+      <a href="index.html" class="brand-logo" aria-label="VestaCare Home AMC Home">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 10.5L12 3l9 7.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1v-9.5z"/>
+            <path d="M12 8v3m0 0l2-1.5M12 11l-2-1.5"/>
+          </svg>
+        </span>
+        <span class="brand-text">
+          <span class="brand-name">VestaCare</span>
+          <span class="brand-tag">Home AMC Service</span>
+        </span>
+      </a>
+
+      <nav class="nav-menu-desktop" aria-label="Primary Navigation">
+        <div class="nav-item has-dropdown">
+          <button type="button" class="nav-link dropdown-toggle-btn" aria-expanded="false" aria-haspopup="true">
+            Home
+            <svg class="dropdown-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </button>
+          <div class="dropdown-menu" role="menu" aria-label="Home Variations">
+            <a href="index.html" class="dropdown-item" role="menuitem">
+              <span class="dropdown-item-icon" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                </svg>
+              </span>
+              <span>
+                <span class="dropdown-item-title">Home 1 — Classic AMC</span>
+                <span class="dropdown-item-desc">Complete residential maintenance overview &amp; plan walkthrough</span>
+              </span>
+            </a>
+            <a href="home-2.html" class="dropdown-item" role="menuitem">
+              <span class="dropdown-item-icon" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="3" y="3" width="7" height="7"></rect>
+                  <rect x="14" y="3" width="7" height="7"></rect>
+                  <rect x="14" y="14" width="7" height="7"></rect>
+                  <rect x="3" y="14" width="7" height="7"></rect>
+                </svg>
+              </span>
+              <span>
+                <span class="dropdown-item-title">Home 2 — Editorial Care</span>
+                <span class="dropdown-item-desc">Interactive plan estimator, tabbed trade matrix &amp; seasonal timeline</span>
+              </span>
+            </a>
+          </div>
+        </div>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="services.html" class="nav-link active">Services</a>
+        <a href="amc-plans.html" class="nav-link">AMC Plans</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+        <a href="dashboard.html" class="nav-link">Dashboard</a>
+      </nav>
+
+      <div class="nav-actions-desktop">
+        <button type="button" class="rtl-toggle-btn" aria-label="Toggle RTL layout" title="Toggle RTL">RTL</button>
+        <button type="button" class="theme-toggle-btn" aria-label="Switch to dark theme" title="Toggle Light/Dark Theme">
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+        </button>
+        <span class="nav-divider" aria-hidden="true"></span>
+        <a href="signup.html" class="nav-auth-signup">Sign Up</a>
+      </div>
+
+      <div class="nav-mobile-controls">
+        <button type="button" id="hamburger-btn" class="hamburger-btn" aria-expanded="false" aria-controls="mobile-nav-drawer" aria-label="Open navigation menu">
+          <svg class="icon-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+          <svg class="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <div id="mobile-nav-drawer" class="mobile-nav-drawer" aria-label="Mobile Navigation">
+      <div class="mobile-nav-list">
+        <div>
+          <button type="button" id="mobile-home-dropdown-btn" class="mobile-nav-link" aria-expanded="false">
+            <span>Home Variations</span>
+            <svg class="dropdown-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </button>
+          <div id="mobile-home-submenu" class="mobile-dropdown-submenu">
+            <a href="index.html" class="mobile-submenu-link">Home 1 — Classic AMC Overview</a>
+            <a href="home-2.html" class="mobile-submenu-link">Home 2 — Editorial &amp; Interactive</a>
+          </div>
+        </div>
+        <a href="about.html" class="mobile-nav-link">About</a>
+        <a href="services.html" class="mobile-nav-link active">Services</a>
+        <a href="amc-plans.html" class="mobile-nav-link">AMC Plans</a>
+        <a href="contact.html" class="mobile-nav-link">Contact</a>
+        <a href="dashboard.html" class="mobile-nav-link">Dashboard</a>
+      </div>
+      <div class="mobile-nav-actions">
+        <div class="mobile-utility-btns">
+          <button type="button" class="rtl-toggle-btn" aria-label="Toggle RTL layout">RTL</button>
+          <button type="button" class="theme-toggle-btn" aria-label="Switch to dark theme">
+            <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+            <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="5"></circle>
+              <line x1="12" y1="1" x2="12" y2="3"></line>
+              <line x1="12" y1="21" x2="12" y2="23"></line>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+              <line x1="1" y1="12" x2="3" y2="12"></line>
+              <line x1="21" y1="12" x2="23" y2="12"></line>
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+            </svg>
+          </button>
+        </div>
+        <a href="signup.html" class="btn btn-primary btn-block">Sign Up</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <!-- ======================================================================
+         UNIFORM NON-HOME PAGE HERO (CENTERED CONTENT & UNIFORM HEIGHT)
+         ====================================================================== -->
+    <section class="page-hero">
+      <div class="container">
+        <div class="page-hero-inner">
+          <span class="eyebrow eyebrow-navy">Comprehensive Residential Scope</span>
+          <h1>Home Maintenance Services &amp; AMC Coverage Catalogue</h1>
+          <p>
+            Review our six core technical maintenance categories. For complete transparency, every category clearly specifies what is included under an Annual Maintenance Contract versus work billed separately.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         CATEGORY FILTER BAR
+         ====================================================================== -->
+    <section class="section-sm section-alt" style="padding-top: var(--space-6); padding-bottom: var(--space-6);">
+      <div class="container">
+        <div style="display:flex; align-items:center; justify-content:center; flex-wrap:wrap; gap: var(--space-3);">
+          <span style="font-family:var(--font-heading); font-weight:700; font-size:0.9rem; color:var(--text-secondary);">Filter by Trade Category:</span>
+          <div style="display:flex; flex-wrap:wrap; justify-content:center; gap: var(--space-2);">
+            <button type="button" class="btn btn-primary btn-sm" data-service-filter="all">All Categories (6)</button>
+            <button type="button" class="btn btn-secondary btn-sm" data-service-filter="electrical">Electrical</button>
+            <button type="button" class="btn btn-secondary btn-sm" data-service-filter="plumbing">Plumbing</button>
+            <button type="button" class="btn btn-secondary btn-sm" data-service-filter="ac">AC Maintenance</button>
+            <button type="button" class="btn btn-secondary btn-sm" data-service-filter="carpentry">Carpentry</button>
+            <button type="button" class="btn btn-secondary btn-sm" data-service-filter="painting">Painting &amp; Civil</button>
+            <button type="button" class="btn btn-secondary btn-sm" data-service-filter="general">General Maintenance</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         DETAILED SERVICE CATALOGUE BLOCKS (BIG CARDS — 1 PER ROW)
+         ====================================================================== -->
+    <section class="section">
+      <div class="container" style="display:flex; flex-direction:column; gap: var(--space-10);">
+
+        <!-- 1. ELECTRICAL -->
+        <article id="electrical" class="form-card big-card" data-service-category="electrical">
+          <div class="hero-grid" style="gap: var(--space-8);">
+            <div>
+              <div style="display:flex; flex-direction:column; align-items:center; text-align:center; margin-bottom: var(--space-4);">
+                <span class="eyebrow">Category 01</span>
+                <div class="service-icon-box" style="margin-bottom:var(--space-2);">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                  </svg>
+                </div>
+                <h2 style="font-size:1.65rem;">Electrical Maintenance</h2>
+                <p style="margin-top: var(--space-2);">
+                  Safe, uninterrupted electrical distribution across every room. Our licensed electricians inspect distribution boards, test earth leakage protection, and repair switches, sockets, fans, and lighting fixtures.
+                </p>
+              </div>
+
+              <div class="form-grid-2 cards-pair" style="margin-bottom: var(--space-6);">
+                <div style="background: var(--bg-surface-alt); padding: var(--space-4); border-radius: var(--radius-md); border-top: 3px solid var(--accent-primary);">
+                  <h3 style="font-size:0.95rem; margin-bottom: var(--space-2); color:var(--accent-primary); text-align:center;">✓ Included in AMC Coverage</h3>
+                  <ul class="service-task-list" style="border-top:none; padding-top:0;">
+                    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg><span>Modular switch, socket &amp; regulator repair/replacement labour</span></li>
+                    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg><span>MCB, RCCB &amp; main distribution board inspection &amp; tightening</span></li>
+                    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg><span>Tube light, LED batten, panel light &amp; bulb holder fitting</span></li>
+                    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg><span>Ceiling fan, exhaust fan &amp; doorbell minor fault troubleshooting</span></li>
+                  </ul>
+                </div>
+
+                <div style="background: var(--bg-surface-alt); padding: var(--space-4); border-radius: var(--radius-md); border-top: 3px solid var(--amber-500);">
+                  <h3 style="font-size:0.95rem; margin-bottom: var(--space-2); color:var(--amber-600); text-align:center;">! Separately Chargeable Work</h3>
+                  <ul class="service-task-list" style="border-top:none; padding-top:0;">
+                    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"></circle></svg><span>Cost of replacement switches, MCBs, LED drivers &amp; fan capacitors</span></li>
+                    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"></circle></svg><span>Concealed wall chasing, new circuit wiring &amp; home automation setup</span></li>
+                    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"></circle></svg><span>Motor coil rewinding and heavy double-height chandelier scaffolding</span></li>
+                  </ul>
+                </div>
+              </div>
+
+              <div style="display:flex; flex-wrap:wrap; justify-content:center; gap: var(--space-3);">
+                <a href="contact.html?service=Electrical#quote-form" class="btn btn-primary">Request Electrical AMC Quote</a>
+                <a href="amc-plans.html" class="btn btn-secondary">Explore AMC Coverage</a>
+              </div>
+            </div>
+
+            <div style="border-radius: var(--radius-lg); overflow:hidden; border: 1px solid var(--border-subtle); max-height: 380px;">
+              <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=900&q=80" onerror="this.onerror=null;this.src='assets/images/service-electrical.jpg'" alt="Electrical panel inspection and testing" style="width:100%; height:100%; object-fit:cover;" />
+            </div>
+          </div>
+        </article>
+
+        <!-- 2. PLUMBING -->
+        <article id="plumbing" class="form-card big-card" data-service-category="plumbing">
+          <div class="hero-grid" style="gap: var(--space-8);">
+            <div>
+              <div style="display:flex; flex-direction:column; align-items:center; text-align:center; margin-bottom: var(--space-4);">
+                <span class="eyebrow">Category 02</span>
+                <div class="service-icon-box" style="margin-bottom:var(--space-2);">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path>
+                  </svg>
+                </div>
+                <h2 style="font-size:1.65rem;">Plumbing &amp; Leak Repairs</h2>
+                <p style="margin-top: var(--space-2);">
+                  Complete maintenance for taps, mixers, concealed cisterns, drainage traps, and bathroom fixtures. We stop slow drips and blockages before they cause damp walls or cabinet rot.
+                </p>
+              </div>
+
+              <div class="form-grid-2 cards-pair" style="margin-bottom: var(--space-6);">
+                <div style="background: var(--bg-surface-alt); padding: var(--space-4); border-radius: var(--radius-md); border-top: 3px solid var(--accent-primary);">
+                  <h3 style="font-size:0.95rem; margin-bottom: var(--space-2); color:var(--accent-primary); text-align:center;">✓ Included in AMC Coverage</h3>
+                  <ul class="service-task-list" style="border-top:none; padding-top:0;">
+                    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg><span>Tap washers, quarter-turn cartridges, angle valves &amp; bib-cock repairs</span></li>
+                    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg><span>Washbasin bottle-trap cleaning &amp; kitchen sink minor block clearing</span></li>
+                    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg><span>Flush tank ball-valve, siphon &amp; health-faucet hose replacement labour</span></li>
+                    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg><span>Showerhead descaling &amp; flexible braided connection pipe fitting</span></li>
+                  </ul>
+                </div>
+
+                <div style="background: var(--bg-surface-alt); padding: var(--space-4); border-radius: var(--radius-md); border-top: 3px solid var(--amber-500);">
+                  <h3 style="font-size:0.95rem; margin-bottom: var(--space-2); color:var(--amber-600); text-align:center;">! Separately Chargeable Work</h3>
+                  <ul class="service-task-list" style="border-top:none; padding-top:0;">
+                    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"></circle></svg><span>Replacement taps, diverter cartridges, flush valves &amp; sanitaryware</span></li>
+                    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"></circle></svg><span>Tile breaking for concealed CPVC/UPVC internal pipe replacement</span></li>
+                    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"></circle></svg><span>Overhead water tank mechanized cleaning &amp; pressure pump purchase</span></li>
+                  </ul>
+                </div>
+              </div>
+
+              <div style="display:flex; flex-wrap:wrap; justify-content:center; gap: var(--space-3);">
+                <a href="contact.html?service=Plumbing#quote-form" class="btn btn-primary">Request Plumbing AMC Quote</a>
+                <a href="amc-plans.html" class="btn btn-secondary">Explore AMC Coverage</a>
+              </div>
+            </div>
+
+            <div style="border-radius: var(--radius-lg); overflow:hidden; border: 1px solid var(--border-subtle); max-height: 380px;">
+              <img src="https://images.unsplash.com/photo-1585704032915-c3400ca199e7?auto=format&fit=crop&w=900&q=80" onerror="this.onerror=null;this.src='assets/images/service-plumbing.jpg'" alt="Plumbing taps, pipelines and fixture inspection" style="width:100%; height:100%; object-fit:cover;" />
+            </div>
+          </div>
+        </article>
+
+        <!-- 3. AC MAINTENANCE -->
+        <article id="ac-maintenance" class="form-card big-card" data-service-category="ac">
+          <div class="hero-grid" style="gap: var(--space-8);">
+            <div>
+              <div style="display:flex; flex-direction:column; align-items:center; text-align:center; margin-bottom: var(--space-4);">
+                <span class="eyebrow">Category 03</span>
+                <div class="service-icon-box" style="margin-bottom:var(--space-2);">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M9.59 4.59A2 2 0 1 1 11 8H2m10.59 11.41A2 2 0 1 0 14 16H2m15.73-8.27A2.5 2.5 0 1 1 19.5 12H2"></path>
+                  </svg>
+                </div>
+                <h2 style="font-size:1.65rem;">AC Maintenance &amp; Servicing</h2>
+                <p style="margin-top: var(--space-2);">
+                  Scheduled cleaning, servicing, and diagnostic inspections for residential split and window air conditioners. Keep cooling performance high and energy consumption low.
+                </p>
+              </div>
+
+              <div class="form-grid-2 cards-pair" style="margin-bottom: var(--space-6);">
+                <div style="background: var(--bg-surface-alt); padding: var(--space-4); border-radius: var(--radius-md); border-top: 3px solid var(--accent-primary);">
+                  <h3 style="font-size:0.95rem; margin-bottom: var(--space-2); color:var(--accent-primary); text-align:center;">✓ Included in AMC Coverage</h3>
+                  <ul class="service-task-list" style="border-top:none; padding-top:0;">
+                    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg><span>Air filter mesh, indoor cooling coil &amp; blower wheel cleaning</span></li>
+                    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg><span>Condensate drain tray &amp; drain pipe pressure flushing</span></li>
+                    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg><span>Outdoor condenser unit cleaning &amp; electrical terminal tightening</span></li>
+                    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg><span>Compressor current draw, thermostat &amp; gas pressure check</span></li>
+                  </ul>
+                </div>
+
+                <div style="background: var(--bg-surface-alt); padding: var(--space-4); border-radius: var(--radius-md); border-top: 3px solid var(--amber-500);">
+                  <h3 style="font-size:0.95rem; margin-bottom: var(--space-2); color:var(--amber-600); text-align:center;">! Separately Chargeable Work</h3>
+                  <ul class="service-task-list" style="border-top:none; padding-top:0;">
+                    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"></circle></svg><span>Refrigerant gas top-up or complete gas charging &amp; brazing</span></li>
+                    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"></circle></svg><span>PCB circuit board repair, fan motor, or compressor replacement</span></li>
+                    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"></circle></svg><span>Complete AC uninstallation, relocation, or new copper piping</span></li>
+                  </ul>
+                </div>
+              </div>
+
+              <div style="display:flex; flex-wrap:wrap; justify-content:center; gap: var(--space-3);">
+                <a href="contact.html?service=AC+Servicing#quote-form" class="btn btn-primary">Request AC AMC Quote</a>
+                <a href="amc-plans.html" class="btn btn-secondary">Explore AMC Coverage</a>
+              </div>
+            </div>
+
+            <div style="border-radius: var(--radius-lg); overflow:hidden; border: 1px solid var(--border-subtle); max-height: 380px;">
+              <img src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?auto=format&fit=crop&w=900&q=80" onerror="this.onerror=null;this.src='assets/images/service-ac.jpg'" alt="Technician cleaning and servicing split AC unit" style="width:100%; height:100%; object-fit:cover;" />
+            </div>
+          </div>
+        </article>
+
+        <!-- 4. CARPENTRY -->
+        <article id="carpentry" class="form-card big-card" data-service-category="carpentry">
+          <div class="hero-grid" style="gap: var(--space-8);">
+            <div>
+              <div style="display:flex; flex-direction:column; align-items:center; text-align:center; margin-bottom: var(--space-4);">
+                <span class="eyebrow">Category 04</span>
+                <div class="service-icon-box" style="margin-bottom:var(--space-2);">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path>
+                  </svg>
+                </div>
+                <h2 style="font-size:1.65rem;">Carpentry &amp; Door Repairs</h2>
+                <p style="margin-top: var(--space-2);">
+                  Expert adjustments and repairs for wooden doors, kitchen cabinets, wardrobe shutters, locks, and architectural hardware so your home's joinery feels solid and aligned.
+                </p>
+              </div>
+
+              <div class="form-grid-2 cards-pair" style="margin-bottom: var(--space-6);">
+                <div style="background: var(--bg-surface-alt); padding: var(--space-4); border-radius: var(--radius-md); border-top: 3px solid var(--accent-primary);">
+                  <h3 style="font-size:0.95rem; margin-bottom: var(--space-2); color:var(--accent-primary); text-align:center;">✓ Included in AMC Coverage</h3>
+                  <ul class="service-task-list" style="border-top:none; padding-top:0;">
+                    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg><span>Main &amp; bedroom door edge planing, hinge tightening &amp; stopper fixing</span></li>
+                    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg><span>Kitchen &amp; wardrobe soft-close concealed hinge adjustment</span></li>
+                    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg><span>Mortise locks, cylindrical latches, tower bolts &amp; handle replacement labour</span></li>
+                    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg><span>Telescopic drawer channel alignment &amp; sliding wardrobe roller tuning</span></li>
+                  </ul>
+                </div>
+
+                <div style="background: var(--bg-surface-alt); padding: var(--space-4); border-radius: var(--radius-md); border-top: 3px solid var(--amber-500);">
+                  <h3 style="font-size:0.95rem; margin-bottom: var(--space-2); color:var(--amber-600); text-align:center;">! Separately Chargeable Work</h3>
+                  <ul class="service-task-list" style="border-top:none; padding-top:0;">
+                    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"></circle></svg><span>Cost of new locks, hydraulic door closers, hinges &amp; drawer channels</span></li>
+                    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"></circle></svg><span>New furniture making, plywood carcass rebuilding &amp; laminate pasting</span></li>
+                    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"></circle></svg><span>Wood polishing, PU coating, and termite chemical treatment</span></li>
+                  </ul>
+                </div>
+              </div>
+
+              <div style="display:flex; flex-wrap:wrap; justify-content:center; gap: var(--space-3);">
+                <a href="contact.html?service=Carpentry#quote-form" class="btn btn-primary">Request Carpentry AMC Quote</a>
+                <a href="amc-plans.html" class="btn btn-secondary">Explore AMC Coverage</a>
+              </div>
+            </div>
+
+            <div style="border-radius: var(--radius-lg); overflow:hidden; border: 1px solid var(--border-subtle); max-height: 380px;">
+              <img src="https://images.unsplash.com/photo-1504148455328-c376907d081c?auto=format&fit=crop&w=900&q=80" onerror="this.onerror=null;this.src='assets/images/service-carpentry.jpg'" alt="Residential carpentry doors and cabinet hardware" style="width:100%; height:100%; object-fit:cover;" />
+            </div>
+          </div>
+        </article>
+
+        <!-- 5. PAINTING & CIVIL -->
+        <article id="painting-civil" class="form-card big-card" data-service-category="painting">
+          <div class="hero-grid" style="gap: var(--space-8);">
+            <div>
+              <div style="display:flex; flex-direction:column; align-items:center; text-align:center; margin-bottom: var(--space-4);">
+                <span class="eyebrow">Category 05</span>
+                <div class="service-icon-box" style="margin-bottom:var(--space-2);">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M19 3H5a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2z"></path>
+                    <path d="M12 11v10"></path>
+                  </svg>
+                </div>
+                <h2 style="font-size:1.65rem;">Painting &amp; Minor Civil Repairs</h2>
+                <p style="margin-top: var(--space-2);">
+                  Keep walls, tile joints, and wet-area perimeters clean and well-maintained with localized putty work, touch-up painting, grouting, and fixture mounting assistance.
+                </p>
+              </div>
+
+              <div class="form-grid-2 cards-pair" style="margin-bottom: var(--space-6);">
+                <div style="background: var(--bg-surface-alt); padding: var(--space-4); border-radius: var(--radius-md); border-top: 3px solid var(--accent-primary);">
+                  <h3 style="font-size:0.95rem; margin-bottom: var(--space-2); color:var(--accent-primary); text-align:center;">✓ Included in AMC Coverage</h3>
+                  <ul class="service-task-list" style="border-top:none; padding-top:0;">
+                    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg><span>Nail hole filling, minor hairline wall crack putty &amp; patch touch-ups</span></li>
+                    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg><span>Bathroom &amp; kitchen counter perimeter anti-fungal silicone resealing</span></li>
+                    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg><span>Re-fixing 1–2 loose skirting tiles &amp; localized bathroom tile regrouting</span></li>
+                    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg><span>Wall drilling for hanging paintings, mirrors, towel rods &amp; shelves</span></li>
+                  </ul>
+                </div>
+
+                <div style="background: var(--bg-surface-alt); padding: var(--space-4); border-radius: var(--radius-md); border-top: 3px solid var(--amber-500);">
+                  <h3 style="font-size:0.95rem; margin-bottom: var(--space-2); color:var(--amber-600); text-align:center;">! Separately Chargeable Work</h3>
+                  <ul class="service-task-list" style="border-top:none; padding-top:0;">
+                    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"></circle></svg><span>Full-wall, full-room, or full-home interior &amp; exterior repainting</span></li>
+                    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"></circle></svg><span>Structural terrace/bathroom waterproofing &amp; damp-proof chemical coats</span></li>
+                    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"></circle></svg><span>Major plastering, brick masonry, and full floor tile relaying</span></li>
+                  </ul>
+                </div>
+              </div>
+
+              <div style="display:flex; flex-wrap:wrap; justify-content:center; gap: var(--space-3);">
+                <a href="contact.html?service=Painting#quote-form" class="btn btn-primary">Request Painting &amp; Civil Quote</a>
+                <a href="amc-plans.html" class="btn btn-secondary">Explore AMC Coverage</a>
+              </div>
+            </div>
+
+            <div style="border-radius: var(--radius-lg); overflow:hidden; border: 1px solid var(--border-subtle); max-height: 380px;">
+              <img src="https://images.unsplash.com/photo-1562259949-e8e7689d7828?auto=format&fit=crop&w=900&q=80" onerror="this.onerror=null;this.src='assets/images/service-painting.jpg'" alt="Painter rolling fresh paint on residential interior wall" style="width:100%; height:100%; object-fit:cover;" />
+            </div>
+          </div>
+        </article>
+
+        <!-- 6. GENERAL MAINTENANCE & INSPECTIONS -->
+        <article id="general-inspection" class="form-card big-card" data-service-category="general">
+          <div class="hero-grid" style="gap: var(--space-8);">
+            <div>
+              <div style="display:flex; flex-direction:column; align-items:center; text-align:center; margin-bottom: var(--space-4);">
+                <span class="eyebrow">Category 06</span>
+                <div class="service-icon-box" style="margin-bottom:var(--space-2);">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M9 11l3 3L22 4"></path>
+                    <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
+                  </svg>
+                </div>
+                <h2 style="font-size:1.65rem;">General Maintenance &amp; Home Inspections</h2>
+                <p style="margin-top: var(--space-2);">
+                  The foundation of every VestaCare AMC. Our engineers conduct scheduled 50-point property diagnostics and provide versatile handyman assistance during every visit.
+                </p>
+              </div>
+
+              <div class="form-grid-2 cards-pair" style="margin-bottom: var(--space-6);">
+                <div style="background: var(--bg-surface-alt); padding: var(--space-4); border-radius: var(--radius-md); border-top: 3px solid var(--accent-primary);">
+                  <h3 style="font-size:0.95rem; margin-bottom: var(--space-2); color:var(--accent-primary); text-align:center;">✓ Included in AMC Coverage</h3>
+                  <ul class="service-task-list" style="border-top:none; padding-top:0;">
+                    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg><span>Scheduled 50-point room-by-room electrical, hydro &amp; safety audit</span></li>
+                    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg><span>Wall dampness &amp; concealed seepage thermal/moisture meter scan</span></li>
+                    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg><span>Window track cleaning, mosquito mesh latch check &amp; minor lubrication</span></li>
+                    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg><span>Digital inspection report delivered after every scheduled visit</span></li>
+                  </ul>
+                </div>
+
+                <div style="background: var(--bg-surface-alt); padding: var(--space-4); border-radius: var(--radius-md); border-top: 3px solid var(--amber-500);">
+                  <h3 style="font-size:0.95rem; margin-bottom: var(--space-2); color:var(--amber-600); text-align:center;">! Separately Chargeable Work</h3>
+                  <ul class="service-task-list" style="border-top:none; padding-top:0;">
+                    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"></circle></svg><span>Deep home cleaning, sofa/carpet shampooing &amp; pest control sprays</span></li>
+                    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"></circle></svg><span>White-goods board repairs (washing machine, refrigerator, microwave)</span></li>
+                    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"></circle></svg><span>Structural civil engineering stability certification</span></li>
+                  </ul>
+                </div>
+              </div>
+
+              <div style="display:flex; flex-wrap:wrap; justify-content:center; gap: var(--space-3);">
+                <a href="contact.html?service=Preventive+Inspections#quote-form" class="btn btn-primary">Schedule Baseline Audit</a>
+                <a href="amc-plans.html" class="btn btn-secondary">Compare AMC Plans</a>
+              </div>
+            </div>
+
+            <div style="border-radius: var(--radius-lg); overflow:hidden; border: 1px solid var(--border-subtle); max-height: 380px;">
+              <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=900&q=80" onerror="this.onerror=null;this.src='assets/images/service-inspection.jpg'" alt="Preventive home inspection specialist conducting property check" style="width:100%; height:100%; object-fit:cover;" />
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SERVICE EXECUTION & WORKMANSHIP STANDARDS
+         ====================================================================== -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-header">
+          <span class="eyebrow">Execution Standards</span>
+          <h2>Every Trade Visit Follows Strict Residential Protocols</h2>
+          <p>
+            Whether it is a scheduled preventive inspection or a single switch replacement, our field engineers adhere to three core guarantees.
+          </p>
+        </div>
+
+        <div class="features-grid-3">
+          <div class="feature-box">
+            <span class="eyebrow">Diagnostics</span>
+            <h3>Calibrated Testing Tools</h3>
+            <p>Digital clamp meters, thermal leak detectors, and pressure gauges used on every diagnostic visit to pinpoint root causes accurately.</p>
+          </div>
+          <div class="feature-box">
+            <span class="eyebrow">Warranty</span>
+            <h3>30-Day Service Guarantee</h3>
+            <p>If any covered repair adjustment recurs within 30 days of a technician visit, our specialist returns to resolve it without consuming an extra callout.</p>
+          </div>
+          <div class="feature-box">
+            <span class="eyebrow eyebrow-amber">Transparency</span>
+            <h3>Zero-Markup Spares Option</h3>
+            <p>Provide your own preferred brand fixtures or approve our procurement at transparent retail invoice rates before any part is replaced.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========================================================================
+       FOOTER (WHITE IN LIGHT MODE + SOCIAL ICONS WITH HOVER)
+       ======================================================================== -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a href="index.html" class="brand-logo" aria-label="VestaCare Home AMC">
+            <span class="brand-mark" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M3 10.5L12 3l9 7.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1v-9.5z"/>
+                <path d="M12 8v3m0 0l2-1.5M12 11l-2-1.5"/>
+              </svg>
+            </span>
+            <span class="brand-text">
+              <span class="brand-name">VestaCare</span>
+              <span class="brand-tag">Home AMC Service</span>
+            </span>
+          </a>
+          <p class="footer-brand-desc">
+            Structured annual maintenance contracts for residential apartments, duplexes, and independent villas. Preventive care, reliable technicians, and transparent coverage.
+          </p>
+          <div class="social-links" aria-label="Social Media Links">
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Follow VestaCare on Facebook">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+            </a>
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Follow VestaCare on X">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4l11.733 16h4.267l-11.733 -16z"></path><path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772"></path></svg>
+            </a>
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Follow VestaCare on Instagram">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+            </a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Follow VestaCare on LinkedIn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+            </a>
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Subscribe to VestaCare on YouTube">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="footer-col-title">Covered Services</h3>
+          <ul class="footer-links">
+            <li><a href="services.html#electrical">Electrical Maintenance</a></li>
+            <li><a href="services.html#plumbing">Plumbing &amp; Leak Repairs</a></li>
+            <li><a href="services.html#ac-maintenance">AC Servicing &amp; HVAC</a></li>
+            <li><a href="services.html#carpentry">Carpentry &amp; Door Repairs</a></li>
+            <li><a href="services.html#painting-civil">Painting &amp; Minor Civil</a></li>
+            <li><a href="services.html#general-inspection">Preventive Inspections</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="footer-col-title">AMC Packages</h3>
+          <ul class="footer-links">
+            <li><a href="amc-plans.html">Basic Care Plan</a></li>
+            <li><a href="amc-plans.html">Standard Care Plan</a></li>
+            <li><a href="amc-plans.html">Premium Care Plan</a></li>
+            <li><a href="amc-plans.html#comparison-table">Plan Comparison Matrix</a></li>
+            <li><a href="amc-plans.html#exclusions">Inclusions &amp; Exclusions</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="footer-col-title">Company &amp; Portal</h3>
+          <ul class="footer-links">
+            <li><a href="index.html">Home 1 — Classic</a></li>
+            <li><a href="home-2.html">Home 2 — Editorial</a></li>
+            <li><a href="about.html">About VestaCare</a></li>
+            <li><a href="contact.html">Contact &amp; Quote Desk</a></li>
+            <li><a href="dashboard.html">Customer Dashboard</a></li>
+            <li><a href="signup.html">Register Property</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="footer-col-title">Contact &amp; Helpline</h3>
+          <div class="footer-contact-list">
+            <div class="footer-contact-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+              <span>+91 (800) 456-7890 (Sample Helpline)</span>
+            </div>
+            <div class="footer-contact-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              <span>care@vestacare-amc.example.com</span>
+            </div>
+            <div class="footer-contact-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+              <span>Suite 402, Crestview Business Park, Indiranagar, Bengaluru 560038</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-disclaimer">
+        <strong>Template Demonstration Notice:</strong> All AMC plan prices in INR, visit counts, response times, coverage limits, and testimonials displayed on this website are editable sample data for template demonstration purposes and do not constitute binding commercial commitments.
+      </div>
+
+      <div class="footer-bottom">
+        <span>&copy; 2026 VestaCare Home AMC Service Template. All rights reserved.</span>
+        <span>Designed for Residential Property Maintenance &amp; Annual Care Contracts.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

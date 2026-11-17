@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Customer AMC Dashboard — VestaCare Home AMC Service</title>
+  <meta name="description" content="VestaCare Customer Dashboard for scheduling maintenance visits, viewing active AMC plan details and allowances, and renewing annual residential contracts." />
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg" />
+  <script>
+    (function() {
+      var savedTheme = localStorage.getItem('vestacare_theme');
+      if (savedTheme === 'dark' || savedTheme === 'light') {
+        document.documentElement.setAttribute('data-theme', savedTheme);
+      }
+      var savedDir = localStorage.getItem('vestacare_dir');
+      if (savedDir === 'rtl' || savedDir === 'ltr') {
+        document.documentElement.setAttribute('dir', savedDir);
+      }
+    })();
+  </script>
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- ========================================================================
+       DASHBOARD HEADER WITH BRAND NAME IN LEFT CORNER
+       ======================================================================== -->
+  <header class="site-header dashboard-header" role="banner">
+    <div class="navbar-container">
+      <!-- Brand Logo & Brand Name in Left Corner -->
+      <a href="index.html" class="brand-logo" aria-label="VestaCare Home AMC Home">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 10.5L12 3l9 7.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1v-9.5z"/>
+            <path d="M12 8v3m0 0l2-1.5M12 11l-2-1.5"/>
+          </svg>
+        </span>
+        <span class="brand-text">
+          <span class="brand-name">VestaCare</span>
+          <span class="brand-tag">Home AMC Service</span>
+        </span>
+      </a>
+
+      <!-- Mobile & Tablet Menu Toggle -->
+      <button type="button" id="dashboard-sidebar-toggle" class="hamburger-btn dashboard-mobile-menu-btn" aria-expanded="false" aria-controls="dashboard-sidebar" aria-label="Toggle dashboard sidebar">
+        <svg class="icon-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+        <svg class="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <div class="dashboard-layout">
+    <!-- ======================================================================
+         LEFT SIDE MENU FROM TOP TO BOTTOM WITH LOGOUT BUTTON
+         ====================================================================== -->
+    <aside id="dashboard-sidebar" class="dashboard-sidebar" aria-label="Customer Dashboard Sidebar">
+      <div class="sidebar-top">
+        <nav class="sidebar-nav-menu" aria-label="Dashboard Sections">
+          <a href="#plan-details" class="sidebar-nav-link active">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+            <span>Plan Details &amp; Allowances</span>
+          </a>
+          <a href="#schedule-visit" class="sidebar-nav-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+            <span>Schedule Service Visit</span>
+          </a>
+          <a href="#visit-history" class="sidebar-nav-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
+            <span>Upcoming &amp; Past Visits</span>
+          </a>
+          <a href="#renew-contract" class="sidebar-nav-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 4 23 10 17 10"></polyline><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"></path></svg>
+            <span>Renew / Upgrade Contract</span>
+          </a>
+        </nav>
+      </div>
+
+      <!-- Bottom Pinned Controls & Logout Button -->
+      <div class="sidebar-bottom">
+        <div class="mobile-utility-btns" style="margin-bottom: var(--space-4);">
+          <button type="button" class="rtl-toggle-btn" aria-label="Toggle RTL layout" title="Toggle RTL">RTL</button>
+          <button type="button" class="theme-toggle-btn" aria-label="Switch to dark theme" title="Toggle Light/Dark Theme">
+            <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+          </button>
+        </div>
+        <div style="margin-bottom: var(--space-3); font-size:0.8rem; color:var(--text-muted); text-align:center;">
+          <strong style="color:var(--text-primary); display:block;">Rajesh Kulkarni (Sample)</strong>
+          <span>Contract #VC-AMC-88412</span>
+        </div>
+        <a href="login.html" class="sidebar-logout-btn">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+            <polyline points="16 17 21 12 16 7"></polyline>
+            <line x1="21" y1="12" x2="9" y2="12"></line>
+          </svg>
+          <span>Logout</span>
+        </a>
+      </div>
+    </aside>
+
+    <!-- ======================================================================
+         MAIN DASHBOARD CONTENT
+         ====================================================================== -->
+    <div class="dashboard-main-wrapper">
+      <main id="main-content" class="dashboard-content">
+        <!-- 1. PLAN DETAILS & ALLOWANCE STATS -->
+        <section id="plan-details" style="margin-bottom: var(--space-10);">
+          <div style="text-align:center; margin-bottom: var(--space-8);">
+            <span class="eyebrow">Homeowner AMC Portal</span>
+            <h1>Customer Maintenance Dashboard</h1>
+            <p>Manage your active residential AMC plan, schedule technician visits, and renew your annual coverage.</p>
+          </div>
+
+          <!-- 3 Summary Cards (2 in 1 row + 3rd centered on tablet/1024px) -->
+          <div class="dashboard-stats-grid">
+            <div class="feature-box">
+              <span class="eyebrow">Active Contract</span>
+              <h3>Standard Care AMC</h3>
+              <p class="tabular-nums" style="font-weight:700; color:var(--accent-primary); font-size:1.1rem; margin: 4px 0;">Contract #VC-AMC-88412</p>
+              <p style="font-size:0.85rem;">3 BHK Apartment (1,850 sq.ft.) • Indiranagar, Bengaluru • Valid through 14 Oct 2027</p>
+            </div>
+
+            <div class="feature-box">
+              <span class="eyebrow">Preventive Audits</span>
+              <h3>3 of 4 Visits Remaining</h3>
+              <p class="tabular-nums" style="font-weight:700; color:var(--accent-primary); font-size:1.1rem; margin: 4px 0;">Next Audit: Q2 Pre-Monsoon</p>
+              <p style="font-size:0.85rem;">Q1 Pre-Summer 50-Point Audit &amp; 3 Split AC Wet Services completed on 12 Mar 2026.</p>
+            </div>
+
+            <div class="feature-box">
+              <span class="eyebrow eyebrow-amber">Breakdown Allowance</span>
+              <h3>10 of 12 Callouts Available</h3>
+              <p class="tabular-nums" style="font-weight:700; color:var(--amber-600); font-size:1.1rem; margin: 4px 0;">Priority 12-Hr SLA Active</p>
+              <p style="font-size:0.85rem;">Covers Electrical, Plumbing, AC, Carpentry, Wet-Area Silicone &amp; Minor Civil Labour.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- 2. SCHEDULE A SERVICE VISIT + CONTRACT RENEWAL -->
+        <section id="schedule-visit" style="margin-bottom: var(--space-10);">
+          <div class="form-grid-2 cards-pair">
+            <!-- Schedule Visit Card -->
+            <div class="form-card">
+              <span class="eyebrow">Book Technician Visit</span>
+              <h2 style="font-size:1.45rem; text-align:center; margin-bottom: var(--space-1);">Schedule a Maintenance Visit</h2>
+              <p style="font-size:0.88rem; text-align:center; margin-bottom: var(--space-5);">
+                Book your next scheduled preventive inspection or request an on-demand breakdown repair under your active AMC.
+              </p>
+
+              <form id="dashboard-schedule-form" novalidate>
+                <div class="form-group">
+                  <label for="visit-trade" class="form-label">Select Maintenance Trade <span class="required">*</span></label>
+                  <select id="visit-trade" class="form-control" required>
+                    <option value="">Choose trade category...</option>
+                    <option value="50-Point Quarterly Preventive Audit">50-Point Quarterly Preventive Audit</option>
+                    <option value="Electrical & Switchboard Repair">Electrical &amp; Switchboard Repair</option>
+                    <option value="Plumbing, Leak & Drain Care">Plumbing, Leak &amp; Drain Care</option>
+                    <option value="Split AC Wet/Dry Servicing">Split AC Wet/Dry Servicing</option>
+                    <option value="Carpentry, Door & Lock Alignment">Carpentry, Door &amp; Lock Alignment</option>
+                    <option value="Bathroom Silicone & Minor Civil">Bathroom Silicone &amp; Minor Civil</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label for="visit-type" class="form-label">Visit Allowance Type <span class="required">*</span></label>
+                  <select id="visit-type" class="form-control" required>
+                    <option value="Scheduled Preventive Visit">Scheduled Preventive Visit (3 Remaining)</option>
+                    <option value="On-Demand Breakdown Callout">On-Demand Breakdown Callout (10 Remaining)</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label for="visit-date" class="form-label">Preferred Visit Date <span class="required">*</span></label>
+                  <input type="date" id="visit-date" class="form-control" value="2026-11-24" required />
+                </div>
+
+                <div class="form-group">
+                  <label for="visit-slot" class="form-label">Preferred Time Window <span class="required">*</span></label>
+                  <select id="visit-slot" class="form-control" required>
+                    <option value="09:00 AM – 12:00 PM">Morning (09:00 AM – 12:00 PM)</option>
+                    <option value="12:30 PM – 03:30 PM">Afternoon (12:30 PM – 03:30 PM)</option>
+                    <option value="04:00 PM – 07:00 PM">Evening (04:00 PM – 07:00 PM)</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label for="visit-notes" class="form-label">Specific Task Notes</label>
+                  <input type="text" id="visit-notes" class="form-control" placeholder="e.g., Master bathroom mixer drip & AC filter clean" />
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-block">
+                  Confirm &amp; Schedule Visit
+                </button>
+
+                <div id="schedule-feedback" class="form-feedback-alert" role="status" aria-live="polite"></div>
+              </form>
+            </div>
+
+            <!-- Contract Renewal & Upgrade Card -->
+            <div id="renew-contract" class="form-card">
+              <span class="eyebrow eyebrow-amber">Contract Renewal &amp; Upgrade</span>
+              <h2 style="font-size:1.45rem; text-align:center; margin-bottom: var(--space-1);">Renew or Upgrade Your AMC Plan</h2>
+              <p style="font-size:0.88rem; text-align:center; margin-bottom: var(--space-5);">
+                Extend your annual property protection early or upgrade to Premium Care for bi-monthly audits and touch-up painting.
+              </p>
+
+              <div style="background: var(--bg-surface-alt); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: var(--space-4); margin-bottom: var(--space-5); text-align:center;">
+                <span style="font-size:0.75rem; font-weight:700; text-transform:uppercase; color:var(--accent-primary); display:block;">Current Plan Status</span>
+                <strong style="font-size:1.15rem; color:var(--text-primary); display:block; margin-top:2px;">Standard Care — ₹26,999 / yr (Sample)</strong>
+                <span style="font-size:0.82rem; color:var(--text-secondary); display:block; margin-top:2px;">10% No-Claim Loyalty Renewal Benefit Eligible</span>
+              </div>
+
+              <form id="dashboard-renew-form" novalidate>
+                <div class="form-group">
+                  <label for="renew-plan-tier" class="form-label">Select Renewal Tier</label>
+                  <select id="renew-plan-tier" class="form-control">
+                    <option value="Standard Care Renewal (₹24,299/yr Sample Loyalty Rate)" selected>Renew Standard Care — ₹24,299/yr (Sample 10% Loyalty Rate)</option>
+                    <option value="Upgrade to Premium Care (₹42,999/yr Sample)">Upgrade to Premium Care — ₹42,999/yr (6 Visits + Painting)</option>
+                    <option value="Switch to Basic Care (₹14,999/yr Sample)">Switch to Basic Care — ₹14,999/yr (2 Visits)</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label for="renew-term" class="form-label">Contract Duration</label>
+                  <select id="renew-term" class="form-control">
+                    <option value="1 Year (12 Months)" selected>1 Year Annual Extension (12 Months)</option>
+                    <option value="2 Years (24 Months — Extra 5% Off)">2 Years Multi-Year Lock (24 Months)</option>
+                  </select>
+                </div>
+
+                <button type="submit" class="btn btn-navy btn-block" style="margin-top: var(--space-2);">
+                  Submit Contract Renewal Request
+                </button>
+
+                <div id="renew-feedback" class="form-feedback-alert" role="status" aria-live="polite"></div>
+              </form>
+            </div>
+          </div>
+        </section>
+
+        <!-- 3. UPCOMING & PAST SERVICE VISITS TABLE -->
+        <section id="visit-history">
+          <div class="form-card dashboard-wide-card big-card">
+            <span class="eyebrow">Service Log</span>
+            <h2 style="font-size:1.45rem; text-align:center; margin-bottom: var(--space-1);">Upcoming &amp; Completed Maintenance Visits</h2>
+            <p style="font-size:0.88rem; text-align:center; margin-bottom: var(--space-5);">
+              Every scheduled visit and breakdown repair is logged against your annual contract allowance.
+            </p>
+
+            <div class="comparison-table-wrapper">
+              <table class="comparison-table" aria-label="Customer Service Visit History">
+                <thead>
+                  <tr>
+                    <th>Ticket Ref</th>
+                    <th>Maintenance Scope</th>
+                    <th>Visit Category</th>
+                    <th>Scheduled Date &amp; Slot</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+                <tbody id="upcoming-visits-tbody">
+                  <tr>
+                    <td><strong class="tabular-nums">VC-VST-4920</strong></td>
+                    <td>Q2 Pre-Monsoon 50-Point Audit<span style="display:block;font-size:0.78rem;color:var(--text-muted);">Balcony drains, RCCB trip test &amp; door edge check</span></td>
+                    <td>Scheduled Preventive Visit</td>
+                    <td class="tabular-nums">2026-11-28 • 09:00 AM – 12:00 PM</td>
+                    <td><span class="allowance-pill" style="background:var(--accent-subtle);color:var(--accent-subtle-text);border-color:var(--border-accent);">Upcoming</span></td>
+                  </tr>
+                  <tr>
+                    <td><strong class="tabular-nums">VC-VST-4412</strong></td>
+                    <td>Kitchen Mixer Cartridge &amp; Trap Clean<span style="display:block;font-size:0.78rem;color:var(--text-muted);">Technician: Prakash Gowda • Labour Covered</span></td>
+                    <td>On-Demand Breakdown Callout</td>
+                    <td class="tabular-nums">2026-09-14 • 12:30 PM – 03:30 PM</td>
+                    <td><span class="allowance-pill">Completed ✓</span></td>
+                  </tr>
+                  <tr>
+                    <td><strong class="tabular-nums">VC-VST-3905</strong></td>
+                    <td>Q1 Pre-Summer Split AC Wet Service (3 Units)<span style="display:block;font-size:0.78rem;color:var(--text-muted);">Technician: Suresh Nair • Coils, filters &amp; drain flush</span></td>
+                    <td>Scheduled Preventive Visit</td>
+                    <td class="tabular-nums">2026-06-10 • 09:00 AM – 12:00 PM</td>
+                    <td><span class="allowance-pill">Completed ✓</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+  </div>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
