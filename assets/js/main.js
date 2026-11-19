@@ -753,6 +753,17 @@
     const scheduleForm = document.getElementById('dashboard-schedule-form');
     const visitsTbody = document.getElementById('upcoming-visits-tbody');
     const scheduleFeedback = document.getElementById('schedule-feedback');
+    const visitDateInput = document.getElementById('visit-date');
+
+    if (visitDateInput && typeof visitDateInput.showPicker === 'function') {
+      visitDateInput.addEventListener('click', () => {
+        try {
+          visitDateInput.showPicker();
+        } catch (err) {
+          // showPicker might throw if already visible
+        }
+      });
+    }
 
     if (scheduleForm && visitsTbody) {
       scheduleForm.addEventListener('submit', (e) => {
