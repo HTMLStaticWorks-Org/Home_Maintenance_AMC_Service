@@ -1382,6 +1382,38 @@ p {
   }
 }
 
+/* Detailed Service Catalogue Big Card Media Box */
+.service-catalogue-media {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--border-subtle);
+  height: 100%;
+  min-height: 440px;
+  background-color: var(--navy-800);
+  display: flex;
+}
+
+.service-catalogue-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+  transition: transform 400ms ease;
+}
+
+.big-card:hover .service-catalogue-media img {
+  transform: scale(1.02);
+}
+
+@media (max-width: 992px) {
+  .service-catalogue-media {
+    min-height: 320px;
+    max-height: 440px;
+    width: 100%;
+  }
+}
+
 /* ==========================================================================
    PROCESS / HOW AMC WORKS STEPS
    ========================================================================== */
@@ -2045,13 +2077,43 @@ p {
   text-align: center;
 }
 
-@media (max-width: 1120px) {
+@media (min-width: 769px) and (max-width: 1120px) {
+  .interactive-tabs-layout {
+    grid-template-columns: 1fr;
+    gap: var(--space-6);
+  }
+  .tabs-nav {
+    flex-direction: row;
+    overflow-x: auto;
+    padding-bottom: var(--space-2);
+  }
+  .tab-trigger-btn {
+    white-space: nowrap;
+    width: auto;
+  }
+  .tab-panel.active {
+    grid-template-columns: 1fr 1fr;
+  }
+  .tab-panel-media {
+    min-height: 420px;
+    height: 100%;
+    max-height: none;
+  }
+  .tab-panel-media img {
+    height: 100%;
+    object-fit: cover;
+    object-position: center 20%;
+  }
+}
+
+@media (max-width: 768px) {
   .interactive-tabs-layout {
     grid-template-columns: 1fr;
   }
   .tabs-nav {
     flex-direction: row;
     overflow-x: auto;
+    padding-bottom: var(--space-2);
   }
   .tab-trigger-btn {
     white-space: nowrap;
@@ -2061,8 +2123,15 @@ p {
     grid-template-columns: 1fr;
   }
   .tab-panel-media {
+    width: 100%;
     min-height: 260px;
-    max-height: 300px;
+    max-height: 380px;
+    aspect-ratio: 16 / 10;
+  }
+  .tab-panel-media img {
+    height: 100%;
+    object-fit: cover;
+    object-position: center 20%;
   }
 }
 
@@ -2683,6 +2752,30 @@ input[type="datetime-local"]::-webkit-calendar-picker-indicator:hover {
   background-color: rgba(0, 0, 0, 0.15);
 }
 
+/* Sidebar Mobile Utilities: hidden on desktop & tablet, shown ONLY in mobile view */
+.sidebar-mobile-utilities {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-3);
+  margin-bottom: var(--space-4);
+  padding-bottom: var(--space-4);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+[data-theme="dark"] .sidebar-mobile-utilities {
+  border-bottom-color: rgba(255, 255, 255, 0.1);
+}
+
+.sidebar-mobile-utilities .rtl-toggle-btn,
+.sidebar-mobile-utilities .theme-toggle-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 38px;
+  min-width: 44px;
+}
+
 .sidebar-logout-btn {
   display: flex;
   align-items: center;
@@ -2756,6 +2849,18 @@ input[type="datetime-local"]::-webkit-calendar-picker-indicator:hover {
   }
   .dashboard-content {
     padding: var(--space-5) var(--space-4);
+  }
+}
+
+/* Move RTL and Theme buttons inside side menu in ONLY mobile view */
+@media (max-width: 767px) {
+  .dashboard-header-right > .rtl-toggle-btn,
+  .dashboard-header-right > .theme-toggle-btn {
+    display: none !important;
+  }
+
+  .sidebar-mobile-utilities {
+    display: flex;
   }
 }
 
@@ -2972,17 +3077,35 @@ input[type="datetime-local"]::-webkit-calendar-picker-indicator:hover {
   flex-grow: 1;
 }
 
-/* 3. Home 2 — Transparent Scope & Quick Overview Table Center Alignment */
+/* 3. Home 2 — Transparent Scope List Alignment & Table Center Alignment */
 .centered-scope-list {
-  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  max-width: 520px;
+  margin: 0 auto;
 }
 
 .centered-scope-list li {
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  gap: 6px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  text-align: left;
+  gap: var(--space-3);
+  font-size: 0.92rem;
+  color: var(--text-secondary);
+  line-height: 1.45;
+}
+
+.centered-scope-list li svg {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+[dir="rtl"] .centered-scope-list li {
+  text-align: right;
 }
 
 .comparison-table.table-centered th,
@@ -2994,7 +3117,7 @@ input[type="datetime-local"]::-webkit-calendar-picker-indicator:hover {
 /* 4. About Page — Team Portraits Uncropped & Unobstructed Badges + Clean Alignment */
 .team-card-media {
   position: relative;
-  height: 275px;
+  height: 330px;
   overflow: hidden;
   background-color: var(--navy-800);
 }
@@ -3003,8 +3126,23 @@ input[type="datetime-local"]::-webkit-calendar-picker-indicator:hover {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 15%;
+  object-position: center top;
   transition: transform 400ms ease;
+}
+
+@media (min-width: 641px) and (max-width: 1120px) {
+  .team-card-media {
+    height: 380px; /* Generous height for ~450px wide 2-col tablet cards so faces and torsos are fully visible */
+  }
+  .team-card-media img {
+    object-position: center 10%;
+  }
+}
+
+@media (max-width: 640px) {
+  .team-card-media {
+    height: 320px;
+  }
 }
 
 .service-card:hover .team-card-media img {
@@ -3071,6 +3209,46 @@ input[type="datetime-local"]::-webkit-calendar-picker-indicator:hover {
   align-items: center;
   gap: var(--space-2);
   flex-shrink: 0;
+}
+
+.dashboard-profile-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-subtle);
+  background-color: var(--bg-surface);
+  color: var(--text-primary);
+  text-decoration: none;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  flex-shrink: 0;
+}
+
+.dashboard-profile-btn svg {
+  width: 19px;
+  height: 19px;
+}
+
+.dashboard-profile-btn:hover {
+  border-color: var(--accent-primary);
+  color: var(--accent-primary);
+  background-color: var(--accent-subtle);
+  transform: translateY(-1px);
+}
+
+[data-theme="dark"] .dashboard-profile-btn {
+  background-color: var(--bg-surface-elevated);
+  border-color: var(--border-subtle);
+  color: #FFFFFF;
+}
+
+[data-theme="dark"] .dashboard-profile-btn:hover {
+  background-color: var(--accent-subtle);
+  color: var(--accent-subtle-text);
+  border-color: var(--border-accent);
 }
 
 .dashboard-profile-pill {
