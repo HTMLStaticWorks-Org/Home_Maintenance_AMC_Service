@@ -1995,6 +1995,8 @@ p {
   grid-template-columns: 320px 1fr;
   gap: var(--space-8);
   align-items: start;
+  width: 100%;
+  max-width: 100%;
 }
 
 .tabs-nav {
@@ -2005,6 +2007,9 @@ p {
   padding: var(--space-3);
   border-radius: var(--radius-lg);
   border: 1px solid var(--border-subtle);
+  min-width: 0;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 .tab-trigger-btn {
@@ -2020,6 +2025,8 @@ p {
   color: var(--text-secondary);
   text-align: left;
   transition: all var(--transition-fast);
+  cursor: pointer;
+  border: 1px solid transparent;
 }
 
 [dir="rtl"] .tab-trigger-btn {
@@ -2035,6 +2042,14 @@ p {
   background-color: var(--accent-primary);
   color: #FFFFFF;
   box-shadow: var(--shadow-xs);
+  border-color: var(--accent-primary);
+}
+
+.tabs-content-area {
+  min-width: 0;
+  max-width: 100%;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .tab-panel {
@@ -2044,22 +2059,31 @@ p {
   border-radius: var(--radius-xl);
   overflow: hidden;
   box-shadow: var(--shadow-sm);
+  min-width: 0;
+  max-width: 100%;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .tab-panel.active {
   display: grid;
   grid-template-columns: 0.95fr 1.05fr;
+  width: 100%;
 }
 
 .tab-panel-media {
-  min-height: 340px;
+  min-height: 380px;
   background-color: var(--navy-900);
+  overflow: hidden;
+  position: relative;
 }
 
 .tab-panel-media img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center center;
+  display: block;
 }
 
 .tab-panel-content {
@@ -2067,6 +2091,9 @@ p {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  background-color: var(--bg-surface);
+  position: relative;
+  z-index: 1;
 }
 
 .tab-panel-content .eyebrow {
@@ -2077,61 +2104,191 @@ p {
   text-align: center;
 }
 
+/* Tablet & 1024px Viewport Rule for Interactive Tabs */
 @media (min-width: 769px) and (max-width: 1120px) {
   .interactive-tabs-layout {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr) !important;
     gap: var(--space-6);
   }
   .tabs-nav {
-    flex-direction: row;
-    overflow-x: auto;
-    padding-bottom: var(--space-2);
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: var(--space-2);
+    padding: var(--space-3);
   }
   .tab-trigger-btn {
-    white-space: nowrap;
-    width: auto;
+    white-space: normal;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    padding: var(--space-3) var(--space-2);
+    font-size: 0.88rem;
+    min-height: 48px;
   }
   .tab-panel.active {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr !important;
+    width: 100% !important;
   }
   .tab-panel-media {
     min-height: 420px;
     height: 100%;
     max-height: none;
+    overflow: hidden;
   }
   .tab-panel-media img {
     height: 100%;
     object-fit: cover;
-    object-position: center 20%;
+    object-position: center center;
+  }
+  .tab-panel-content {
+    padding: var(--space-6);
   }
 }
 
-@media (max-width: 768px) {
+/* Tablet Portrait & Large Mobile (601px - 768px) */
+@media (min-width: 601px) and (max-width: 768px) {
   .interactive-tabs-layout {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: var(--space-5);
   }
   .tabs-nav {
-    flex-direction: row;
-    overflow-x: auto;
-    padding-bottom: var(--space-2);
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: var(--space-2);
+    padding: var(--space-2);
   }
   .tab-trigger-btn {
-    white-space: nowrap;
-    width: auto;
+    white-space: normal;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    padding: var(--space-2) var(--space-2);
+    font-size: 0.82rem;
+    min-height: 46px;
   }
   .tab-panel.active {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr !important;
+    width: 100% !important;
   }
   .tab-panel-media {
     width: 100%;
-    min-height: 260px;
-    max-height: 380px;
-    aspect-ratio: 16 / 10;
+    height: 260px;
+    min-height: 220px;
+    max-height: 300px;
+    overflow: hidden;
   }
   .tab-panel-media img {
+    width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center 20%;
+    object-position: center center;
+  }
+  .tab-panel-content {
+    padding: var(--space-6) var(--space-5);
+  }
+}
+
+/* Mobile Viewports (<= 600px) */
+@media (max-width: 600px) {
+  .interactive-tabs-layout {
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: var(--space-4);
+    width: 100%;
+    max-width: 100%;
+  }
+  .tabs-nav {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: var(--space-2);
+    padding: var(--space-2);
+    width: 100%;
+    min-width: 0;
+    border-radius: var(--radius-lg);
+  }
+  .tab-trigger-btn {
+    white-space: normal;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    padding: 10px 8px;
+    font-size: 0.82rem;
+    font-weight: 700;
+    line-height: 1.25;
+    min-height: 46px;
+    border-radius: var(--radius-md);
+  }
+  [dir="rtl"] .tab-trigger-btn {
+    text-align: center;
+  }
+  .tab-panel.active {
+    grid-template-columns: 1fr !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    border-radius: var(--radius-lg);
+  }
+  .tab-panel-media {
+    width: 100%;
+    height: 220px;
+    min-height: 190px;
+    max-height: 260px;
+    overflow: hidden;
+    position: relative;
+    background-color: var(--navy-900);
+  }
+  .tab-panel-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+    display: block;
+  }
+  .tab-panel-content {
+    padding: var(--space-5) var(--space-4);
+    width: 100%;
+    box-sizing: border-box;
+    background-color: var(--bg-surface);
+  }
+  .tab-panel-content h3 {
+    font-size: 1.25rem;
+    line-height: 1.35;
+    text-align: center;
+  }
+  .tab-panel-content p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+  .tab-panel-content .pricing-features {
+    gap: var(--space-3);
+  }
+  .tab-panel-content .pricing-features li {
+    font-size: 0.86rem;
+    line-height: 1.45;
+  }
+}
+
+/* Extra Small Mobile Viewports (<= 420px) */
+@media (max-width: 420px) {
+  .tabs-nav {
+    gap: 6px;
+    padding: 6px;
+  }
+  .tab-trigger-btn {
+    font-size: 0.76rem;
+    padding: 8px 6px;
+    min-height: 42px;
+  }
+  .tab-panel-media {
+    height: 190px;
+    min-height: 170px;
+  }
+  .tab-panel-content {
+    padding: var(--space-4) var(--space-3);
+  }
+  .tab-panel-content h3 {
+    font-size: 1.15rem;
+  }
+  .tab-panel-content .pricing-features li {
+    font-size: 0.82rem;
   }
 }
 
