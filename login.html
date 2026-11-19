@@ -21,6 +21,27 @@
   <link rel="stylesheet" href="assets/css/styles.css" />
 </head>
 <body class="no-fixed-header">
+  <!-- Top Corner RTL & Theme Controls -->
+  <div class="auth-top-controls" aria-label="Display Controls">
+    <button type="button" class="rtl-toggle-btn" aria-label="Toggle RTL layout" title="Toggle RTL">RTL</button>
+    <button type="button" class="theme-toggle-btn" aria-label="Switch to dark theme" title="Toggle Light/Dark Theme">
+      <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+      </svg>
+      <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <circle cx="12" cy="12" r="5"></circle>
+        <line x1="12" y1="1" x2="12" y2="3"></line>
+        <line x1="12" y1="21" x2="12" y2="23"></line>
+        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+        <line x1="1" y1="12" x2="3" y2="12"></line>
+        <line x1="21" y1="12" x2="23" y2="12"></line>
+        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+      </svg>
+    </button>
+  </div>
+
   <main id="main-content" class="auth-standalone-page">
     <div class="auth-single-card">
       <!-- Brand Logo & Brand Name in Top Center Inside Card -->
@@ -57,10 +78,7 @@
 
         <!-- Separate Line 2: Password -->
         <div class="form-group">
-          <div style="display:flex; align-items:center; justify-content:space-between;">
-            <label for="login-password" class="form-label">Password <span class="required">*</span></label>
-            <a href="#forgot-password-box" id="forgot-password-trigger" style="font-size:0.82rem; font-weight:600; color:var(--accent-primary);">Forgot Password?</a>
-          </div>
+          <label for="login-password" class="form-label">Password <span class="required">*</span></label>
           <div class="password-input-wrapper">
             <input type="password" id="login-password" class="form-control" placeholder="Enter your password (min. 6 characters)" required style="padding-right: 68px;" />
             <button type="button" class="password-toggle-btn" data-target="login-password" aria-label="Show password">Show</button>
@@ -68,18 +86,19 @@
           <span class="form-error-msg">Please enter your password (minimum 6 characters).</span>
         </div>
 
+        <!-- Remember Me & Forgot Password Aligned Row -->
+        <div class="auth-remember-row">
+          <label style="display:inline-flex; align-items:center; gap:8px; font-size:0.88rem; cursor:pointer;">
+            <input type="checkbox" id="remember-me" style="width:16px; height:16px; accent-color:var(--accent-primary);" />
+            <span>Remember me</span>
+          </label>
+          <a href="#forgot-password-box" id="forgot-password-trigger" class="auth-forgot-link">Forgot Password?</a>
+        </div>
+
         <!-- Forgot Password Inline Recovery Box -->
         <div id="forgot-password-box" style="display:none; background: var(--bg-surface-alt); border: 1px solid var(--border-accent); border-radius: var(--radius-md); padding: var(--space-4); margin-bottom: var(--space-4); font-size:0.85rem;">
           <strong style="display:block; margin-bottom:4px; color:var(--text-primary);">Password Reset Assistance</strong>
           <p style="font-size:0.82rem; margin-bottom:0;">Enter your registered email above or contact our AMC Support Desk at <strong>care@vestacare-amc.example.com</strong> to receive a password reset link.</p>
-        </div>
-
-        <!-- Remember Me -->
-        <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom: var(--space-5);">
-          <label style="display:inline-flex; align-items:center; gap:8px; font-size:0.88rem; cursor:pointer;">
-            <input type="checkbox" id="remember-me" style="width:16px; height:16px; accent-color:var(--accent-primary);" />
-            <span>Remember me on this device</span>
-          </label>
         </div>
 
         <button type="submit" class="btn btn-primary btn-lg btn-block">

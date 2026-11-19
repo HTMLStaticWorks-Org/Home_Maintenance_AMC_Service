@@ -776,8 +776,9 @@
         const tr = document.createElement('tr');
         tr.innerHTML = `
           <td><strong class="tabular-nums">${ticketId}</strong></td>
-          <td>${trade}<span style="display:block;font-size:0.78rem;color:var(--text-muted);">${notes || type}</span></td>
+          <td class="scope-col">${trade}<span style="display:block;font-size:0.78rem;color:var(--text-muted);">${notes || type}</span></td>
           <td>${type}</td>
+          <td>Assigned on Confirmation</td>
           <td class="tabular-nums">${date} • ${slot}</td>
           <td><span class="allowance-pill" style="background:var(--accent-subtle);color:var(--accent-subtle-text);border-color:var(--border-accent);">Confirmed</span></td>
         `;

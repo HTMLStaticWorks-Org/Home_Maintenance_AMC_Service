@@ -42,18 +42,38 @@
         </span>
       </a>
 
-      <!-- Mobile & Tablet Menu Toggle -->
-      <button type="button" id="dashboard-sidebar-toggle" class="hamburger-btn dashboard-mobile-menu-btn" aria-expanded="false" aria-controls="dashboard-sidebar" aria-label="Toggle dashboard sidebar">
-        <svg class="icon-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
-          <line x1="3" y1="6" x2="21" y2="6"></line>
-          <line x1="3" y1="12" x2="21" y2="12"></line>
-          <line x1="3" y1="18" x2="21" y2="18"></line>
-        </svg>
-        <svg class="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
-          <line x1="18" y1="6" x2="6" y2="18"></line>
-          <line x1="6" y1="6" x2="18" y2="18"></line>
-        </svg>
-      </button>
+      <!-- Top Right Corner: RTL & Theme Toggle -->
+      <div class="dashboard-header-right">
+        <button type="button" class="rtl-toggle-btn" aria-label="Toggle RTL layout" title="Toggle RTL">RTL</button>
+        <button type="button" class="theme-toggle-btn" aria-label="Switch to dark theme" title="Toggle Light/Dark Theme">
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+        </button>
+        <!-- Mobile & Tablet Menu Toggle -->
+        <button type="button" id="dashboard-sidebar-toggle" class="hamburger-btn dashboard-mobile-menu-btn" aria-expanded="false" aria-controls="dashboard-sidebar" aria-label="Toggle dashboard sidebar">
+          <svg class="icon-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+          <svg class="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
     </div>
   </header>
 
@@ -83,19 +103,8 @@
         </nav>
       </div>
 
-      <!-- Bottom Pinned Controls & Logout Button -->
+      <!-- Bottom Pinned Logout Button -->
       <div class="sidebar-bottom">
-        <div class="mobile-utility-btns" style="margin-bottom: var(--space-4);">
-          <button type="button" class="rtl-toggle-btn" aria-label="Toggle RTL layout" title="Toggle RTL">RTL</button>
-          <button type="button" class="theme-toggle-btn" aria-label="Switch to dark theme" title="Toggle Light/Dark Theme">
-            <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
-            <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
-          </button>
-        </div>
-        <div style="margin-bottom: var(--space-3); font-size:0.8rem; color:var(--text-muted); text-align:center;">
-          <strong style="color:var(--text-primary); display:block;">Rajesh Kulkarni (Sample)</strong>
-          <span>Contract #VC-AMC-88412</span>
-        </div>
         <a href="login.html" class="sidebar-logout-btn">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
             <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
@@ -112,13 +121,18 @@
          ====================================================================== -->
     <div class="dashboard-main-wrapper">
       <main id="main-content" class="dashboard-content">
+        <!-- Welcome Message Banner -->
+        <div class="dashboard-welcome-banner">
+          <div>
+            <span class="eyebrow eyebrow-navy" style="margin-bottom: var(--space-2);">Homeowner AMC Portal</span>
+            <h1>Welcome back, Rajesh Kulkarni!</h1>
+            <p>Your Standard Care AMC (#VC-AMC-88412) is active. Your next Q2 Pre-Monsoon audit is scheduled for 28 Nov 2026.</p>
+          </div>
+          <a href="#schedule-visit" class="btn btn-primary">Schedule New Visit</a>
+        </div>
+
         <!-- 1. PLAN DETAILS & ALLOWANCE STATS -->
         <section id="plan-details" style="margin-bottom: var(--space-10);">
-          <div style="text-align:center; margin-bottom: var(--space-8);">
-            <span class="eyebrow">Homeowner AMC Portal</span>
-            <h1>Customer Maintenance Dashboard</h1>
-            <p>Manage your active residential AMC plan, schedule technician visits, and renew your annual coverage.</p>
-          </div>
 
           <!-- 3 Summary Cards (2 in 1 row + 3rd centered on tablet/1024px) -->
           <div class="dashboard-stats-grid">
@@ -256,13 +270,14 @@
               Every scheduled visit and breakdown repair is logged against your annual contract allowance.
             </p>
 
-            <div class="comparison-table-wrapper">
+            <div class="comparison-table-wrapper dashboard-table-scroll">
               <table class="comparison-table" aria-label="Customer Service Visit History">
                 <thead>
                   <tr>
                     <th>Ticket Ref</th>
                     <th>Maintenance Scope</th>
                     <th>Visit Category</th>
+                    <th>Assigned Technician</th>
                     <th>Scheduled Date &amp; Slot</th>
                     <th>Status</th>
                   </tr>
@@ -270,22 +285,25 @@
                 <tbody id="upcoming-visits-tbody">
                   <tr>
                     <td><strong class="tabular-nums">VC-VST-4920</strong></td>
-                    <td>Q2 Pre-Monsoon 50-Point Audit<span style="display:block;font-size:0.78rem;color:var(--text-muted);">Balcony drains, RCCB trip test &amp; door edge check</span></td>
+                    <td class="scope-col">Q2 Pre-Monsoon 50-Point Audit<span style="display:block;font-size:0.78rem;color:var(--text-muted);">Balcony drains, RCCB trip test &amp; door edge check</span></td>
                     <td>Scheduled Preventive Visit</td>
+                    <td>Arjun Deshmukh</td>
                     <td class="tabular-nums">2026-11-28 • 09:00 AM – 12:00 PM</td>
                     <td><span class="allowance-pill" style="background:var(--accent-subtle);color:var(--accent-subtle-text);border-color:var(--border-accent);">Upcoming</span></td>
                   </tr>
                   <tr>
                     <td><strong class="tabular-nums">VC-VST-4412</strong></td>
-                    <td>Kitchen Mixer Cartridge &amp; Trap Clean<span style="display:block;font-size:0.78rem;color:var(--text-muted);">Technician: Prakash Gowda • Labour Covered</span></td>
+                    <td class="scope-col">Kitchen Mixer Cartridge &amp; Trap Clean<span style="display:block;font-size:0.78rem;color:var(--text-muted);">Labour Covered Under AMC Allowance</span></td>
                     <td>On-Demand Breakdown Callout</td>
+                    <td>Prakash Gowda</td>
                     <td class="tabular-nums">2026-09-14 • 12:30 PM – 03:30 PM</td>
                     <td><span class="allowance-pill">Completed ✓</span></td>
                   </tr>
                   <tr>
                     <td><strong class="tabular-nums">VC-VST-3905</strong></td>
-                    <td>Q1 Pre-Summer Split AC Wet Service (3 Units)<span style="display:block;font-size:0.78rem;color:var(--text-muted);">Technician: Suresh Nair • Coils, filters &amp; drain flush</span></td>
+                    <td class="scope-col">Q1 Pre-Summer Split AC Wet Service (3 Units)<span style="display:block;font-size:0.78rem;color:var(--text-muted);">Coils, air filters &amp; condensate drain flush</span></td>
                     <td>Scheduled Preventive Visit</td>
+                    <td>Suresh Nair</td>
                     <td class="tabular-nums">2026-06-10 • 09:00 AM – 12:00 PM</td>
                     <td><span class="allowance-pill">Completed ✓</span></td>
                   </tr>
